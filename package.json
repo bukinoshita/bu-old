@@ -1,0 +1,62 @@
+{
+  "name": "bukinoshita",
+  "version": "1.0.0",
+  "description": "full-time open sourcerer and nomad",
+  "repository": {
+    "url": "https://github.com/bukinoshita/bu",
+    "type": "git"
+  },
+  "author": "Bu Kinoshita <bukinoshita@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start",
+    "test": "xo",
+    "precommit": "lint-staged"
+  },
+  "dependencies": {
+    "next": "^3.0.6",
+    "react": "^15.6.1",
+    "react-dom": "^15.6.1",
+    "sort-arr": "^0.0.2"
+  },
+  "devDependencies": {
+    "eslint-config-prettier": "^2.3.0",
+    "eslint-plugin-react": "^7.2.1",
+    "husky": "^0.14.3",
+    "lint-staged": "^4.0.3",
+    "prettier": "^1.5.3",
+    "xo": "^0.18.2"
+  },
+  "xo": {
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "env": [
+      "browser",
+      "node"
+    ],
+    "rules": {
+      "react/react-in-jsx-scope": 0,
+      "import/named": 0,
+      "import/no-extraneous-dependencies": 0,
+      "react/prop-types": 0,
+      "react/display-name": 0,
+      "import/no-unassigned-import": 0,
+      "camelcase": 0
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run test",
+      "prettier --single-quote --write",
+      "git add"
+    ]
+  },
+  "now": {
+    "alias": "bukinoshita.io"
+  }
+}
