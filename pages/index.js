@@ -3,10 +3,11 @@
 import { Component } from 'react';
 import 'isomorphic-fetch';
 import sortArr from 'sort-arr';
+import Link from 'next/link';
 
 import Page from './../layouts/page';
 
-export default class Home extends Component {
+class Home extends Component {
   static async getInitialProps() {
     const res = await fetch(
       'https://api.github.com/users/bukinoshita/repos?per_page=100'
@@ -29,14 +30,18 @@ export default class Home extends Component {
 
           <h3>
             &gt; currently working on <a href="https://franz.sh">franz</a> and{' '}
-            <a href={html_url}>{name}</a>
-            .
+            <a href={html_url}>{name}</a>.
           </h3>
 
           <footer>
             <ul>
               <li>
-                <a href="https://medium.com/@bukinoshita">essays</a>/
+                <Link href="/about/work-experience">
+                  <span>work</span>
+                </Link>/
+              </li>
+              <li>
+                <a href="https://medium.com/@bukinoshita">medium</a>/
               </li>
               <li>
                 <a href="https://twitter.com/bukinoshita">twitter</a>/
@@ -76,12 +81,15 @@ export default class Home extends Component {
                 padding-right: 2px;
               }
 
-              a {
+              a,
+              span {
                 color: #868e96;
                 margin-right: 2px;
+                cursor: pointer;
               }
 
-              a:hover {
+              a:hover,
+              span:hover {
                 color: #000;
               }
 
@@ -113,3 +121,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default Home;
