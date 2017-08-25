@@ -30,12 +30,12 @@ class WorkExperience extends Component {
       {
         title: 'Education',
         description: `Learn more about my education. Where and how I've been studying my whole life.`,
-        href: '/about/education'
+        href: '/'
       },
       {
         title: 'Blog',
         description: `Sometimes I like to write about code and share my knowledge to learn/teach other people.`,
-        href: '/blog'
+        href: '/'
       }
     ];
 
