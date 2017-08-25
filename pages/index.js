@@ -1,26 +1,26 @@
-'use strict';
+'use strict'
 
-import { Component } from 'react';
-import 'isomorphic-fetch';
-import sortArr from 'sort-arr';
-import Link from 'next/link';
+import { Component } from 'react'
+import 'isomorphic-fetch'
+import sortArr from 'sort-arr'
+import Link from 'next/link'
 
-import Page from './../layouts/page';
+import Page from './../layouts/page'
 
 class Home extends Component {
   static async getInitialProps() {
     const res = await fetch(
       'https://api.github.com/users/bukinoshita/repos?per_page=100'
-    );
-    const json = await res.json();
-    return { stars: json };
+    )
+    const json = await res.json()
+    return { stars: json }
   }
 
   render() {
     const { name, html_url } = sortArr(
       this.props.stars,
       'pushed_at'
-    ).reverse()[0];
+    ).reverse()[0]
 
     return (
       <Page>
@@ -78,13 +78,13 @@ class Home extends Component {
               li {
                 font-size: 13px;
                 color: #868e96;
-                padding-right: 2px;
+                padding-right: 5px;
               }
 
               a,
               span {
                 color: #868e96;
-                margin-right: 2px;
+                margin-right: 5px;
                 cursor: pointer;
               }
 
@@ -118,8 +118,8 @@ class Home extends Component {
           </style>
         </div>
       </Page>
-    );
+    )
   }
 }
 
-export default Home;
+export default Home
