@@ -68,8 +68,8 @@ class WorkExperience extends Component {
             </p>
 
             <p className="italic">
-              * Also built Embrace Open Source (+9k users), Ritoplz (+4k users)
-              and Tweetstockr (+5k).
+              * Also built Embrace Open Source (9K+ users), Ritoplz (4K+ users)
+              and Tweetstockr (5K+ users).
             </p>
           </header>
 
