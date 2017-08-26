@@ -1,31 +1,31 @@
-'use strict';
+'use strict'
 
-import { Component } from 'react';
-import 'isomorphic-fetch';
+import { Component } from 'react'
+import 'isomorphic-fetch'
 
-import Page from './../../layouts/page';
-import Row from './../../components/row';
-import Job from './../../components/job';
-import Back from './../../components/back';
-import Footnotes from './../../components/footnotes';
-import work from './../../data/work';
-import { colors, typography } from './../../theme';
+import Page from './../../layouts/page'
+import Row from './../../components/row'
+import Job from './../../components/job'
+import Back from './../../components/back'
+import Footnotes from './../../components/footnotes'
+import work from './../../data/work'
+import { colors, typography } from './../../theme'
 
 class WorkExperience extends Component {
   static async getInitialProps() {
-    const api = 'https://api.npms.io/v2/search?q=maintainer';
-    const username = 'bukinoshita';
-    const size = 250;
-    const offset = 0;
-    const res = await fetch(`${api}:${username}&size=${size}&from=${offset}`);
-    const pkgs = await res.json();
+    const api = 'https://api.npms.io/v2/search?q=maintainer'
+    const username = 'bukinoshita'
+    const size = 250
+    const offset = 0
+    const res = await fetch(`${api}:${username}&size=${size}&from=${offset}`)
+    const pkgs = await res.json()
 
-    return { pkgs };
+    return { pkgs }
   }
 
   render() {
-    const { total } = this.props.pkgs;
-    const list = work.map(w => <Job key={w.company} data={w} />);
+    const { total } = this.props.pkgs
+    const list = work.map(w => <Job key={w.company} data={w} />)
     const footnotes = [
       {
         title: 'Education',
@@ -37,7 +37,7 @@ class WorkExperience extends Component {
         description: `Sometimes I like to write about code and share my knowledge to learn/teach other people.`,
         href: '/'
       }
-    ];
+    ]
 
     return (
       <Page color="#000">
@@ -144,8 +144,8 @@ class WorkExperience extends Component {
           }
         `}</style>
       </Page>
-    );
+    )
   }
 }
 
-export default WorkExperience;
+export default WorkExperience

@@ -41,7 +41,9 @@ class Home extends Component {
                 </Link>/
               </li>
               <li>
-                <a href="https://medium.com/@bukinoshita">medium</a>/
+                <Link href="/blog">
+                  <span>blog</span>
+                </Link>/
               </li>
               <li>
                 <a href="https://twitter.com/bukinoshita">twitter</a>/
