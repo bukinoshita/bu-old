@@ -6,6 +6,7 @@ import sortArr from 'sort-arr'
 import Link from 'next/link'
 
 import Page from './../layouts/page'
+import { colors, typography } from './../theme'
 
 class Home extends Component {
   static async getInitialProps() {
@@ -23,7 +24,7 @@ class Home extends Component {
     ).reverse()[0]
 
     return (
-      <Page color="#fff">
+      <Page color={colors.white}>
         <div>
           <h1>bu kinoshita</h1>
           <h2>front-end engineer & ux designer</h2>
@@ -68,7 +69,7 @@ class Home extends Component {
               }
 
               h2 {
-                color: #868e96;
+                color: ${colors.subtitle};
                 line-height: 30px;
               }
 
@@ -79,32 +80,32 @@ class Home extends Component {
 
               li {
                 font-size: 13px;
-                color: #868e96;
+                color: ${colors.subtitle};
                 padding-right: 5px;
               }
 
               a,
               span {
-                color: #868e96;
+                color: ${colors.subtitle};
                 margin-right: 5px;
                 cursor: pointer;
               }
 
               a:hover,
               span:hover {
-                color: #000;
+                color: ${colors.black};
               }
 
               h3 {
-                font-weight: 400;
+                font-weight: ${typography.regular};
                 font-size: 14px;
-                color: #868e96;
+                color: ${colors.subtitle};
                 margin-top: 16px;
               }
 
               h3 a {
-                font-weight: 600;
-                color: #000;
+                font-weight: ${typography.bold};
+                color: ${colors.black};
               }
 
               h3 a:hover {

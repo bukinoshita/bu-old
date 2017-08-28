@@ -36,7 +36,7 @@ class WorkExperience extends Component {
       {
         title: 'Blog',
         description: `Sometimes I like to write about code and share my knowledge to learn/teach other people.`,
-        href: '/'
+        href: '/blog'
       }
     ]
 

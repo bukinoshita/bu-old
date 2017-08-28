@@ -48,7 +48,6 @@ const Footnotes = ({ footnotes }) => {
           <div>
             <h4>
               {footnote2.title}
-              <span>(not ready yet)</span>
             </h4>
             <p>
               {footnote2.description}
