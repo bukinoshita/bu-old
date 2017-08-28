@@ -2,9 +2,11 @@
 
 import Link from 'next/link'
 
-import { colors } from './../theme'
+import { colors, typography, phone } from './../theme'
 
 const Back = ({ inversed = false, href = '/' }) => {
+  const backTo = href === '/' ? '/home' : href
+
   return (
     <div className={inversed ? 'inversed' : null}>
       <Link href={href} prefetch>
@@ -22,6 +24,10 @@ const Back = ({ inversed = false, href = '/' }) => {
             <line x1="20" y1="12" x2="4" y2="12" />
             <polyline points="10 18 4 12 10 6" />
           </svg>
+
+          <span>
+            {backTo}
+          </span>
         </span>
       </Link>
 
@@ -49,10 +55,25 @@ const Back = ({ inversed = false, href = '/' }) => {
           transform: scale(1.1);
         }
 
+        div:hover span span {
+          color: ${colors.white};
+        }
+
         span {
           height: 30px;
           width: 30px;
           display: block;
+          postion: relative;
+        }
+
+        span span {
+          position: absolute;
+          top: -2px;
+          left: 40px;
+          font-size: ${typography.f12};
+          font-weight: ${typography.bold};
+          color: ${colors.subtitle};
+          transition: all 0.2s ease;
         }
 
         .inversed {
@@ -64,6 +85,12 @@ const Back = ({ inversed = false, href = '/' }) => {
         .inversed polyline {
           fill: ${colors.white};
           color: ${colors.white};
+        }
+
+        @media ${phone} {
+          span span {
+            display: none;
+          }
         }
       `}</style>
     </div>

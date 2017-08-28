@@ -33,16 +33,10 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": [
-      "prettier",
-      "prettier/react",
-      "plugin:react/recommended"
-    ],
-    "env": [
-      "browser",
-      "node"
-    ],
+    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
+    "env": ["browser", "node"],
     "rules": {
+      "react/display-name": 0,
       "react/react-in-jsx-scope": 0,
       "import/named": 0,
       "import/no-extraneous-dependencies": 0,
