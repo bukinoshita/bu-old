@@ -2,10 +2,12 @@
 
 import { colors, typography } from './../theme'
 
-const Remote = () => {
+const JobLabel = ({ title }) => {
   return (
     <span>
-      <div>Remote</div>
+      <div>
+        {title}
+      </div>
 
       <style jsx>{`
         div {
@@ -26,4 +28,4 @@ const Remote = () => {
   )
 }
 
-export default Remote
+export default JobLabel

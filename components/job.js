@@ -1,11 +1,12 @@
 'use strict'
 
-import Remote from './remote'
+import JobLabel from './job-label'
 import { colors } from './../theme'
 
 const Job = ({ data }) => {
-  const { role, company, from, to, location, remote } = data
-  const isRemote = remote ? <Remote /> : null
+  const { role, company, from, to, location, remote, freelance } = data
+  const isRemote = remote ? <JobLabel title="remote" /> : null
+  const isFreelance = freelance ? <JobLabel title="freelance" /> : null
 
   return (
     <li>
@@ -13,6 +14,7 @@ const Job = ({ data }) => {
         {role}
 
         {isRemote}
+        {isFreelance}
       </h3>
       <h4>
         {company}
