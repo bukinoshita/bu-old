@@ -1,6 +1,6 @@
 {
   "name": "bukinoshita",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "full-time open sourcerer and nomad",
   "repository": {
     "url": "https://github.com/bukinoshita/bu",
@@ -33,15 +33,21 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
-    "env": ["browser", "node"],
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "env": [
+      "browser",
+      "node"
+    ],
     "rules": {
       "react/display-name": 0,
       "react/react-in-jsx-scope": 0,
       "import/named": 0,
       "import/no-extraneous-dependencies": 0,
       "react/prop-types": 0,
-      "react/display-name": 0,
       "import/no-unassigned-import": 0,
       "camelcase": 0,
       "react/no-unescaped-entities": 0
