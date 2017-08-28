@@ -1,10 +1,11 @@
-'use strict';
+'use strict'
 
-import Remote from './remote';
+import Remote from './remote'
+import { colors } from './../theme'
 
 const Job = ({ data }) => {
-  const { role, company, from, to, location, remote } = data;
-  const isRemote = remote ? <Remote /> : null;
+  const { role, company, from, to, location, remote } = data
+  const isRemote = remote ? <Remote /> : null
 
   return (
     <li>
@@ -44,7 +45,7 @@ const Job = ({ data }) => {
         }
 
         p {
-          color: #fff;
+          color: ${colors.white};
           font-size: 10px;
           text-transform: uppercase;
         }
@@ -61,22 +62,22 @@ const Job = ({ data }) => {
         }
 
         li:hover {
-          border-color: #fff;
+          border-color: ${colors.white};
         }
 
         h3 {
-          color: #fff;
+          color: ${colors.white};
           font-size: 14px;
         }
 
         h4 {
-          color: #ababab;
+          color: ${colors.subtitle};
           font-size: 12px;
           margin-top: 5px;
         }
       `}</style>
     </li>
-  );
-};
+  )
+}
 
-export default Job;
+export default Job

@@ -1,4 +1,6 @@
-'use strict';
+'use strict'
+
+import { colors, typography } from './../theme'
 
 const Remote = () => {
   return (
@@ -7,21 +9,21 @@ const Remote = () => {
 
       <style jsx>{`
         div {
-          color: #000;
+          color: ${colors.black};
           padding: 1px 5px;
           vertical-align: middle;
           border-radius: 1px;
-          font-weight: 600;
+          font-weight: ${typography.bold};
           margin-left: 10px;
           line-height: 1.35;
           display: inline-block;
-          font-size: 10px;
+          font-size: ${typography.f10};
           text-transform: lowercase;
-          background-color: #fff;
+          background-color: ${colors.white};
         }
       `}</style>
     </span>
-  );
-};
+  )
+}
 
-export default Remote;
+export default Remote

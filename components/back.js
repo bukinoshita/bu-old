@@ -2,6 +2,8 @@
 
 import Link from 'next/link'
 
+import { colors } from './../theme'
+
 const Back = ({ inversed = false, href = '/' }) => {
   return (
     <div className={inversed ? 'inversed' : null}>
@@ -34,7 +36,7 @@ const Back = ({ inversed = false, href = '/' }) => {
           line-height: 36px;
           text-align: center;
           display: block;
-          background-color: #fff;
+          background-color: ${colors.white};
           border-radius: 1px;
           position: fixed;
           top: 25px;
@@ -54,14 +56,14 @@ const Back = ({ inversed = false, href = '/' }) => {
         }
 
         .inversed {
-          background-color: #000;
+          background-color: ${colors.black};
         }
 
         .inversed svg,
         .inversed line,
         .inversed polyline {
-          fill: #fff;
-          color: #fff;
+          fill: ${colors.white};
+          color: ${colors.white};
         }
       `}</style>
     </div>

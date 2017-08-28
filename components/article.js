@@ -50,11 +50,11 @@ const Article = ({ id, title, description, date }) => {
           }
 
           article:hover p {
-            color: #fff;
+            color: ${colors.white};
           }
 
           h2 {
-            color: #fff;
+            color: ${colors.white};
             font-size: ${typography.f18};
             margin-bottom: 10px;
           }
