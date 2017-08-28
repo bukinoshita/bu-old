@@ -96,7 +96,7 @@ export default ({ url: { pathname } }) => {
         edit history.
       </P>
 
-      <Image src="https://cdn-images-1.medium.com/max/2000/1*AyhIG2wpXHpezmMZO2wrJg.png" />
+      <Image src={`/static/posts/${post.id}/reddit.png`} />
 
       <H3>Facebook</H3>
       <P>
@@ -104,9 +104,9 @@ export default ({ url: { pathname } }) => {
         want and make it visible to anyone the edit history.
       </P>
 
-      <Image src="https://cdn-images-1.medium.com/max/2000/1*kxDpAGTwyPj3ZEFd5Lh93w.png" />
+      <Image src={`/static/posts/${post.id}/edit-history.png`} />
 
-      <Image src="https://cdn-images-1.medium.com/max/1600/1*al_GFK0UXle063aCG14YQA.png" />
+      <Image src={`/static/posts/${post.id}/timeline.png`} />
 
       <P>
         After looking at some examples around the web, I came to the conclusion
@@ -115,7 +115,7 @@ export default ({ url: { pathname } }) => {
         edited.
       </P>
 
-      <Image src="https://cdn-images-1.medium.com/max/2000/1*DzDJsrrL4wgdQrmZcRXieQ.png" />
+      <Image src={`/static/posts/${post.id}/tweet.png`} />
 
       <P>
         And when the user clicks on the “Edited” text it will open the tweet
@@ -124,7 +124,7 @@ export default ({ url: { pathname } }) => {
 
       <H2>How the animations should look like and how it should work</H2>
 
-      <Image src="https://cdn-images-1.medium.com/max/1600/1*N9C8mjtyhqtLt6neTpLlAQ.gif" />
+      <Image src={`/static/posts/${post.id}/animation.gif`} />
 
       <H2>Conclusion</H2>
 

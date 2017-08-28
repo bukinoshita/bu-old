@@ -12,7 +12,7 @@ const Post = ({
   children,
   post: { title, description, id, medium, translation }
 }) => {
-  const cover = `/static/posts/${id}.png`
+  const cover = `/static/posts/${id}/cover.png`
   const md = medium ? <Medium href={medium} /> : null
   const pt = translation ? <Pt id={id} /> : null
 
