@@ -5,7 +5,7 @@ import Link from 'next/link'
 const Back = ({ inversed = false, href = '/' }) => {
   return (
     <div className={inversed ? 'inversed' : null}>
-      <Link href={href}>
+      <Link href={href} prefetch>
         <span>
           <svg
             width="18"
@@ -24,6 +24,10 @@ const Back = ({ inversed = false, href = '/' }) => {
       </Link>
 
       <style jsx>{`
+        svg {
+          vertical-align: initial;
+        }
+
         div {
           height: 30px;
           width: 30px;

@@ -8,6 +8,7 @@ import Row from './../../components/row'
 import Job from './../../components/job'
 import Back from './../../components/back'
 import Footnotes from './../../components/footnotes'
+import Separator from './../../components/separator'
 import work from './../../data/work'
 import { colors, typography } from './../../theme'
 
@@ -77,7 +78,7 @@ class WorkExperience extends Component {
             {list}
           </ul>
 
-          <hr className="separator" />
+          <Separator />
 
           <Footnotes footnotes={footnotes} />
         </Row>
@@ -132,15 +133,6 @@ class WorkExperience extends Component {
             font-size: ${typography.f12};
             font-style: italic;
             margin-top: 15px;
-          }
-
-          .separator {
-            width: 50px;
-            height: 1px;
-            display: block;
-            border: none;
-            background-color: ${colors.subtitle};
-            margin: 50px auto;
           }
         `}</style>
       </Page>

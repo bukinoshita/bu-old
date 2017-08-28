@@ -1,49 +1,49 @@
-'use strict';
+'use strict'
 
-import Head from 'next/head';
-import Router from 'next/router';
-import Progress from 'nprogress';
+import Head from 'next/head'
+import Router from 'next/router'
+import Progress from 'nprogress'
 
-import pkg from '../package';
-import { colors } from './../theme';
+import pkg from '../package'
+import { colors } from './../theme'
 
-let progress;
+let progress
 const stopProgress = () => {
-  clearTimeout(progress);
-  Progress.done();
-};
+  clearTimeout(progress)
+  Progress.done()
+}
 
 Router.onRouteChangeStart = () => {
-  progress = setTimeout(Progress.start, 200);
-};
+  progress = setTimeout(Progress.start, 200)
+}
 
-Router.onRouteChangeComplete = stopProgress;
-Router.onRouteChangeError = stopProgress;
+Router.onRouteChangeComplete = stopProgress
+Router.onRouteChangeError = stopProgress
 
 if (global.document) {
   const info = [
     `Version: ${pkg.version}`,
     `Find the code here: ${pkg.repository.url}`,
     `Have a great day! 🎉`
-  ];
+  ]
 
   for (const message of info) {
-    console.log(message);
+    console.log(message)
   }
 }
 
 const viewSource = event => {
-  const allowed = ['P', 'H1', 'SPAN'];
+  const allowed = ['P', 'H1', 'SPAN']
 
   if (allowed.includes(event.target.tagName)) {
-    return;
+    return
   }
 
-  document.location = pkg.repository.url;
-  event.preventDefault();
-};
+  document.location = pkg.repository.url
+  event.preventDefault()
+}
 
-export default ({ children, color = '#fff' }) => {
+export default ({ children, color = '#000' }) => {
   return (
     <main
       style={{ backgroundColor: color, minHeight: '100vh' }}
@@ -116,8 +116,12 @@ export default ({ children, color = '#fff' }) => {
             opacity: 1;
             transform: rotate(3deg) translate(0px, -4px);
           }
+
+          svg {
+            vertical-align: middle;
+          }
         `}
       </style>
     </main>
-  );
-};
+  )
+}

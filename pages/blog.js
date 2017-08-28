@@ -1,7 +1,6 @@
 'use strict'
 
 import { Component } from 'react'
-import Link from 'next/link'
 
 import Page from './../layouts/page'
 import Row from './../components/row'
@@ -29,18 +28,6 @@ class Blog extends Component {
         <Row>
           <header>
             <h1>blog</h1>
-
-            <p>
-              most of the time I'll be writing about <strong>javascript</strong>{' '}
-              and <strong>projects</strong> I'm working on.
-            </p>
-
-            <p>
-              you can also read my posts in{' '}
-              <Link href="/blog/pt">
-                <a>portuguese</a>
-              </Link>.
-            </p>
           </header>
 
           <hr className="separator" />

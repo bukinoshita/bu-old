@@ -6,7 +6,7 @@ import { colors, typography } from './../theme'
 
 const Article = ({ id, title, description, date }) => {
   return (
-    <Link href={`/blog/post/${id}`}>
+    <Link href={`/blog/${id}`} prefetch>
       <article>
         <h2>
           {title}
@@ -89,7 +89,7 @@ const Article = ({ id, title, description, date }) => {
 
           .arrow {
             display: inline-block;
-            vertical-align: sub;
+            vertical-align: initial;
             margin-left: 5px;
             opacity: 0;
             transform: translateX(-20px);

@@ -1,17 +1,17 @@
-'use strict';
+'use strict'
 
-import Link from 'next/link';
+import Link from 'next/link'
 
-import { colors, typography, phone } from './../theme';
+import { colors, typography, phone } from './../theme'
 
 const Footnotes = ({ footnotes }) => {
-  const footnote1 = footnotes[0];
-  const footnote2 = footnotes[1];
+  const footnote1 = footnotes[0]
+  const footnote2 = footnotes[1]
 
   return (
     <ul>
       <li>
-        <Link href={footnote1.href}>
+        <Link href={footnote1.href} prefetch>
           <div>
             <h4>
               {footnote1.title}
@@ -44,7 +44,7 @@ const Footnotes = ({ footnotes }) => {
       </li>
 
       <li>
-        <Link href={footnote2.href}>
+        <Link href={footnote2.href} prefetch>
           <div>
             <h4>
               {footnote2.title}
@@ -128,11 +128,11 @@ const Footnotes = ({ footnotes }) => {
 
         .arrow {
           display: inline-block;
-          vertical-align: sub;
           margin-left: 5px;
           opacity: 0;
           transform: translateX(-20px);
           transition: all 0.2s ease;
+          vertical-align: initial;
         }
 
         @media ${phone} {
@@ -144,7 +144,7 @@ const Footnotes = ({ footnotes }) => {
         }
       `}</style>
     </ul>
-  );
-};
+  )
+}
 
-export default Footnotes;
+export default Footnotes

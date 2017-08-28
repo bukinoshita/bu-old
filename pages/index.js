@@ -23,7 +23,7 @@ class Home extends Component {
     ).reverse()[0]
 
     return (
-      <Page>
+      <Page color="#fff">
         <div>
           <h1>bu kinoshita</h1>
           <h2>front-end engineer & ux designer</h2>
@@ -36,12 +36,12 @@ class Home extends Component {
           <footer>
             <ul>
               <li>
-                <Link href="/about/work-experience">
+                <Link href="/about/work-experience" prefetch>
                   <span>work</span>
                 </Link>/
               </li>
               <li>
-                <Link href="/blog">
+                <Link href="/blog" prefetch>
                   <span>blog</span>
                 </Link>/
               </li>
