@@ -106,6 +106,7 @@ class Home extends Component {
               h3 a {
                 font-weight: ${typography.bold};
                 color: ${colors.black};
+                margin-right: 0;
               }
 
               h3 a:hover {
