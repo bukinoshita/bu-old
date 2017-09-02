@@ -88,7 +88,7 @@ export default class GootHumanizeGreeting extends Component {
         </P>
         <P>
           I was having some issues that running `goot` with React locally and
-          when deployed I was returning differents and times.
+          when deployed I was returning different and times.
         </P>
         <H3>v0.0.2 & v0.0.3</H3>
         <P>
