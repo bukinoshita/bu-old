@@ -50,25 +50,38 @@ export default ({ children, color = '#000' }) => {
       onDoubleClick={viewSource}
     >
       <Head>
+        <title>
+          {pkg.name} — {pkg.description}
+        </title>
+
+        <meta name="theme-color" content={colors.black} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta charSet="utf-8" />
+        <meta name="description" content={pkg.description} />
+        <meta
+          name="keywords"
+          content="front, programming, design, ux, user, experience, javascript, js, node, nodejs"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:site" content="@bukinoshita" />
+        <meta name="twitter:creator" content="@bukinoshita" />
+        <meta name="twitter:title" content={pkg.name} />
+        <meta name="twitter:description" content={pkg.description} />
         <meta
           property="twitter:image:src"
           content={`https://bukinoshita.io/static/cover.png`}
         />
-        <meta
-          property="og:image"
-          content={`https://bukinoshita.io/static/cover.png`}
-        />
 
-        <title>bukinoshita</title>
+        <meta property="og:url" content="https://bukinoshita.io" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="bukinoshita" />
+        <meta property="og:image" content="static/cover.png" />
+        <meta property="og:description" content={pkg.description} />
+        <meta property="og:site_name" content="bukinoshita" />
 
         <link rel="apple-touch-icon" href="/static/icon.png" />
         <link rel="icon" href="/static/icon.png" type="image/png" />
-        <meta
-          name="viewport"
-          content="width=device-width, initial-scale=1, user-scalable=no"
-        />
-        <meta name="description" content={pkg.description} />
-        <meta name="twitter:site" content="@bukinoshita" />
       </Head>
 
       {children}

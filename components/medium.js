@@ -4,8 +4,8 @@ import { colors, typography, phone } from './../theme'
 
 const Medium = ({ href }) => {
   return (
-    <a href={href}>
-      <div className="post-info__item">
+    <div className="post-info__item">
+      <a href={href}>
         <div className="block-pt">
           <svg width="16px" viewBox="0 0 25 19">
             <g id="medium" fillRule="nonzero" fill="#000000">
@@ -18,56 +18,59 @@ const Medium = ({ href }) => {
         </div>
 
         <span>This post was also published on Medium.</span>
+      </a>
 
-        <style jsx>{`
+      <style jsx>{`
+        .post-info__item {
+          width: 50%;
+          padding-right: 30px;
+        }
+
+        a {
+          display: flex;
+          align-items: center;
+          opacity: .5;
+          cursor: pointer;
+          transition: all 0.2s ease;
+        }
+
+        a:hover {
+          opacity: 1;
+        }
+
+        .post-info__item:hover span {
+          text-decoration: underline;
+        }
+
+        .block-pt {
+          width: 30px;
+          height: 30px;
+          min-width: 30px;
+          background-color: ${colors.white};
+          display: block;
+          text-align: center;
+          line-height: 30px;
+          border-radius: 2px;
+          text-transform: uppercase;
+          font-size: ${typography.f12};
+          font-weight: ${typography.bold};
+        }
+
+        span {
+          color: ${colors.white};
+          font-size: ${typography.f12};
+          margin-left: 10px;
+          line-height: 1rem;
+          transition: all 0.2s ease;
+        }
+
+        @media ${phone} {
           .post-info__item {
-            width: 100%;
-            display: flex;
-            align-items: center;
-            opacity: .5;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            padding-right: 30px;
+            margin-bottom: 30px;
           }
-
-          .post-info__item:hover {
-            opacity: 1;
-          }
-
-          .post-info__item:hover span {
-            text-decoration: underline;
-          }
-
-          .block-pt {
-            width: 30px;
-            height: 30px;
-            min-width: 30px;
-            background-color: ${colors.white};
-            display: block;
-            text-align: center;
-            line-height: 30px;
-            border-radius: 2px;
-            text-transform: uppercase;
-            font-size: ${typography.f12};
-            font-weight: ${typography.bold};
-          }
-
-          span {
-            color: ${colors.white};
-            font-size: ${typography.f12};
-            margin-left: 10px;
-            line-height: 1rem;
-            transition: all 0.2s ease;
-          }
-
-          @media ${phone} {
-            .post-info__item {
-              margin-bottom: 30px;
-            }
-          }
-        `}</style>
-      </div>
-    </a>
+        }
+      `}</style>
+    </div>
   )
 }
 

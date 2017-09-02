@@ -1,5 +1,7 @@
 'use strict'
 
+import Head from 'next/head'
+
 import Page from './page'
 import Row from './../components/row'
 import Back from './../components/back'
@@ -15,9 +17,35 @@ const Post = ({
   const cover = `/static/posts/${id}/cover.png`
   const md = medium ? <Medium href={medium} /> : null
   const pt = translation ? <Pt id={id} /> : null
+  let info = null
+
+  if (md || pt) {
+    info = (
+      <div>
+        {md}
+        {pt}
+
+        <style jsx>{`
+          div {
+            display: flex;
+            justify-content: space-between;
+            padding: 30px 0 0;
+            flex-wrap: wrap;
+          }
+        `}</style>
+      </div>
+    )
+  }
 
   return (
     <Page>
+      <Head>
+        <title>
+          bukinoshita - {title}
+        </title>
+        <meta name="description" content={description} />
+      </Head>
+
       <Back href="/blog" />
 
       <Row>
@@ -31,10 +59,7 @@ const Post = ({
           {description}
         </h2>
 
-        <div className="post-info">
-          {md}
-          {pt}
-        </div>
+        {info}
 
         <Separator />
 
@@ -64,13 +89,6 @@ const Post = ({
           line-height: 1.7rem;
           margin-top: 10px;
           margin-bottom: 30px;
-        }
-
-        .post-info {
-          display: flex;
-          justify-content: space-between;
-          padding: 30px 0 0;
-          flex-wrap: wrap;
         }
       `}</style>
     </Page>

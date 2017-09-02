@@ -16,13 +16,15 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "goot": "^0.0.7",
     "isomorphic-fetch": "^2.2.1",
     "next": "^3.0.6",
     "npmstat": "^1.0.1",
     "nprogress": "^0.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
-    "sort-arr": "^0.0.2"
+    "sort-arr": "^0.0.2",
+    "spacetime": "^1.3.1"
   },
   "devDependencies": {
     "eslint-config-prettier": "^2.3.0",
@@ -33,8 +35,15 @@
     "xo": "^0.18.2"
   },
   "xo": {
-    "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
-    "env": ["browser", "node"],
+    "extends": [
+      "prettier",
+      "prettier/react",
+      "plugin:react/recommended"
+    ],
+    "env": [
+      "browser",
+      "node"
+    ],
     "rules": {
       "react/display-name": 0,
       "react/react-in-jsx-scope": 0,

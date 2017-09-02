@@ -1,8 +1,17 @@
 [
   {
+    "id": "behind-the-product-goot-humanize-greetings",
+    "title": "Behind The Product: Goot humanize greetings",
+    "description": "Introducing `goot` — A nodejs module to help humanize greetings in different languages.",
+    "date": "2 Sep 2017",
+    "medium": "",
+    "translation": false
+  },
+  {
     "id": "twitter-edit-tweet-concept",
     "title": "Twitter: “edit tweet“ concept",
-    "description": "I’ve been working on the “edit tweet” feature for Twitter since many users have been asking for this.",
+    "description": "We can build skyscrapers hundreds and hundreds of stories tall and thousands of feet tall with elevators that just shoot to the top in a matter of a minute or two but we can't edit out tweets.",
+    "date": "28 Aug 2017",
     "medium": "https://medium.com/the-zero/twitter-edit-tweet-concept-9744dde4b7d2",
     "translation": false
   }

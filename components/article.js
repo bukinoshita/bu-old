@@ -8,12 +8,11 @@ const Article = ({ id, title, description, date }) => {
   return (
     <Link href={`/blog/${id}`} prefetch>
       <article>
+        <label>
+          {date}
+        </label>
         <h2>
           {title}
-
-          <label>
-            {date}
-          </label>
         </h2>
         <p>
           {description}
@@ -63,8 +62,9 @@ const Article = ({ id, title, description, date }) => {
             color: ${colors.subtitle};
             font-weight: ${typography.bold};
             text-transform: uppercase;
-            margin-left: 10px;
             font-size: ${typography.f10};
+            margin-bottom: 10px;
+            display: block;
             vertical-align: middle;
           }
 
