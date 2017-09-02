@@ -16,9 +16,10 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "electron": "^1.7.5",
     "isomorphic-fetch": "^2.2.1",
     "next": "^3.0.6",
-    "npm-user-packages": "^3.0.0",
+    "npmstat": "^1.0.1",
     "nprogress": "^0.2.0",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",

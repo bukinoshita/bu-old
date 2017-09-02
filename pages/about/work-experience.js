@@ -1,7 +1,7 @@
 'use strict'
 
 import { Component } from 'react'
-import 'isomorphic-fetch'
+import { getDownloads, getPackages } from 'npmstat'
 
 import Page from './../../layouts/page'
 import Row from './../../components/row'
@@ -14,18 +14,16 @@ import { colors, typography } from './../../theme'
 
 class WorkExperience extends Component {
   static async getInitialProps() {
-    const api = 'https://api.npms.io/v2/search?q=maintainer'
-    const username = 'bukinoshita'
-    const size = 250
-    const offset = 0
-    const res = await fetch(`${api}:${username}&size=${size}&from=${offset}`)
-    const pkgs = await res.json()
+    const pkgs = await getPackages('bukinoshita')
+    const { downloads } = await getDownloads('react-cookies', {
+      range: '01-01-01:2017-09-01'
+    })
 
-    return { pkgs }
+    return { pkgs, downloads }
   }
 
   render() {
-    const { total } = this.props.pkgs
+    const { downloads, pkgs: { total } } = this.props
     const list = work.map(w => <Job key={w.company} data={w} />)
     const footnotes = [
       {
@@ -50,15 +48,16 @@ class WorkExperience extends Component {
 
             <h2>Currently</h2>
             <p>
-              <strong>open sourcerer:</strong> I've been developing a bunch of
-              nodejs modules, I have{' '}
+              <strong>open sourcerer:</strong> Developing a bunch of nodejs
+              modules. I currently have{' '}
               <a href="https://www.npmjs.com/~bukinoshita">
                 {total} packages
               </a>{' '}
-              published on npm and the most popular one has{' '}
-              <a href="https://www.npmjs.com/package/react-cookies">
-                17K+ downloads
-              </a>.
+              published on npm and the most popular one is called{' '}
+              <a href="https://github.com/bukinoshita/react-cookies">
+                react-cookies
+              </a>{' '}
+              with <strong>{downloads} downloads</strong>.
             </p>
 
             <p>
