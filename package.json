@@ -16,7 +16,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "goot": "^0.0.7",
+    "goot": "^1.0.0",
     "isomorphic-fetch": "^2.2.1",
     "next": "^3.0.6",
     "npmstat": "^1.0.1",

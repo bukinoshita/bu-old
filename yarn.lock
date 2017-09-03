@@ -2301,9 +2301,9 @@ globby@^6.0.0, globby@^6.1.0:
     pify "^2.0.0"
     pinkie-promise "^2.0.0"
 
-goot@^0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/goot/-/goot-0.0.7.tgz#b1d6c66ff97bcd2c99dea8d250c060f9954dd3c6"
+goot@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/goot/-/goot-1.0.0.tgz#9f64865956c2cbcc2d543c161a02ccb9bf72cca5"
 
 got@^6.7.1:
   version "6.7.1"

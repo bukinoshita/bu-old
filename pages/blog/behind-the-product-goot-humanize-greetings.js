@@ -15,15 +15,10 @@ import Highlight from './../../components/highlight'
 import posts from './../../data/posts'
 
 export default class GootHumanizeGreeting extends Component {
-  static async getInitialProps() {
-    const now = spacetime().hour()
-    const greeting = await goot(now)
-
-    return { greeting }
-  }
-
   render() {
-    const { url: { pathname }, greeting } = this.props
+    const now = spacetime().hour()
+    const greeting = goot(now)
+    const { url: { pathname } } = this.props
     const p = pathname.substring(6, pathname.length)
     const post = posts.filter(({ id }) => id === p)[0]
 
