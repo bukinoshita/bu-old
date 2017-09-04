@@ -12,11 +12,13 @@ import { colors, typography } from './../theme'
 
 const Post = ({
   children,
-  post: { title, description, id, medium, translation }
+  post: { title, description, id, medium, translation },
+  url = ''
 }) => {
   const cover = `/static/posts/${id}/cover.png`
+  const isPt = url.includes('/pt/')
   const md = medium ? <Medium href={medium} /> : null
-  const pt = translation ? <Pt id={id} /> : null
+  const pt = translation ? <Pt id={id} isPt={isPt} /> : null
   let info = null
 
   if (md || pt) {

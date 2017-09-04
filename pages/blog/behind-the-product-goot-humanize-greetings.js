@@ -83,7 +83,7 @@ export default class GootHumanizeGreeting extends Component {
         </P>
         <P>
           I was having some issues that running `goot` with React locally and
-          when deployed I was returning different and times.
+          when deployed I was returning different times.
         </P>
         <H3>v0.0.2 & v0.0.3</H3>
         <P>
@@ -124,7 +124,7 @@ export default class GootHumanizeGreeting extends Component {
 
         <P>
           I've been using `goot` in some{' '}
-          <Url href="https://github.com/ritoplz/ritoplz/blob/master/pages/login.js#L28-L29">
+          <Url href="https://github.com/bukinoshita/goot#example">
             projects
           </Url>{' '}
           that I did and it worked pretty well. For now `goot` returns a

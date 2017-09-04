@@ -4,13 +4,21 @@ import Link from 'next/link'
 
 import { colors, typography } from './../theme'
 
-const Pt = ({ id }) => {
-  return (
-    <Link href={`/blog/pt/${id}`} prefetch>
-      <div className="post-info__item">
-        <div className="block-pt">pt</div>
+const Pt = ({ id, isPt }) => {
+  const language = isPt ? 'english' : 'portuguese'
+  const href = isPt ? `/blog/${id}` : `/blog/pt/${id}`
+  const pt = isPt ? 'en' : 'pt'
 
-        <a>Read this post in portuguese.</a>
+  return (
+    <Link href={href} prefetch>
+      <div className="post-info__item">
+        <div className="block-pt">
+          {pt}
+        </div>
+
+        <a>
+          Read this post in {language}.
+        </a>
 
         <style jsx>{`
           .post-info__item {
