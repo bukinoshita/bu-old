@@ -66,6 +66,7 @@ const Medium = ({ href }) => {
 
         @media ${phone} {
           .post-info__item {
+            width: 100%;
             margin-bottom: 30px;
           }
         }

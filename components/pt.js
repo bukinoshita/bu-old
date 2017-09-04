@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 
-import { colors, typography } from './../theme'
+import { colors, typography, phone } from './../theme'
 
 const Pt = ({ id, isPt }) => {
   const language = isPt ? 'english' : 'portuguese'
@@ -59,6 +59,12 @@ const Pt = ({ id, isPt }) => {
             margin-left: 10px;
             line-height: 1rem;
             transition: all 0.2s ease;
+          }
+
+          @media ${phone} {
+            .post-info__item {
+              width: 100%;
+            }
           }
         `}</style>
       </div>
