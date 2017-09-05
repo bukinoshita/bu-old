@@ -1,7 +1,7 @@
 'use strict'
 
 import { Component } from 'react'
-import { getPackages } from 'npmstat'
+import { getPackages, getDownloads } from 'npmstat'
 
 import Page from './../../layouts/page'
 import Row from './../../components/row'
@@ -15,12 +15,17 @@ import { colors, typography } from './../../theme'
 class WorkExperience extends Component {
   static async getInitialProps() {
     const pkgs = await getPackages('bukinoshita')
+    const { downloads } = await getDownloads('react-cookies', {
+      range: '2016-01-01:2017-09-05'
+    })
 
-    return { pkgs }
+    return { pkgs, downloads }
   }
 
   render() {
-    const { pkgs: { total } } = this.props
+    const { pkgs: { total }, downloads } = this.props
+    console.log(parseFloat(downloads))
+
     const list = work.map(w => <Job key={w.company} data={w} />)
     const footnotes = [
       {
@@ -54,7 +59,7 @@ class WorkExperience extends Component {
               <a href="https://github.com/bukinoshita/react-cookies">
                 react-cookies
               </a>{' '}
-              with <strong>20K+ downloads</strong>.
+              with <strong>{downloads} downloads</strong>.
             </p>
 
             <p>
