@@ -43,7 +43,7 @@ const Back = ({ inversed = false, href = '/' }) => {
           text-align: center;
           display: block;
           background-color: ${colors.white};
-          border-radius: 1px;
+          border-radius: 3px;
           position: fixed;
           top: 25px;
           left: 25px;
