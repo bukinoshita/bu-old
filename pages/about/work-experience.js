@@ -24,8 +24,6 @@ class WorkExperience extends Component {
 
   render() {
     const { pkgs: { total }, downloads } = this.props
-    console.log(parseFloat(downloads))
-
     const list = work.map(w => <Job key={w.company} data={w} />)
     const footnotes = [
       {
