@@ -12,6 +12,7 @@ import Bold from './../../components/bold'
 import Image from './../../components/image'
 import Url from './../../components/url'
 import Highlight from './../../components/highlight'
+import GithubEmbed from './../../components/github-embed'
 import posts from './../../data/posts'
 
 export default class GootHumanizeGreeting extends Component {
@@ -140,6 +141,11 @@ export default class GootHumanizeGreeting extends Component {
           use, check it{' '}
           <Url href="https://github.com/bukinoshita/goot">here</Url>.
         </P>
+
+        <GithubEmbed
+          project="bukinoshita/goot"
+          description="Goot humazine greetings 👋"
+        />
       </Post>
     )
   }
