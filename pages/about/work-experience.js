@@ -16,7 +16,7 @@ class WorkExperience extends Component {
   static async getInitialProps() {
     const pkgs = await getPackages('bukinoshita')
     const { downloads } = await getDownloads('react-cookies', {
-      range: '2016-01-01:2017-09-05'
+      range: '2016-01-01:2017-09-07'
     })
 
     return { pkgs, downloads }
