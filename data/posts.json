@@ -1,5 +1,21 @@
 [
   {
+    "id": "part-ii-how-to-create-a-node-module",
+    "title": "Part II: How to create a node module",
+    "description": "Let's learn how to create a small and simple node module with some ES2015 features and more by making a pizza",
+    "date": "7 Sep 2017",
+    "medium": "https://medium.com/the-zero/part-ii-how-to-create-a-node-module-5f3b1d3b4b70",
+    "translation": false
+  },
+  {
+    "id": "part-i-how-to-create-a-node-module",
+    "title": "Part I: How to create a node module",
+    "description": "Let's learn how to create a small and simple node module with some ES2015 features and more by making a pizza",
+    "date": "7 Sep 2017",
+    "medium": "https://medium.com/the-zero/part-i-how-to-create-a-node-module-5f3b1d3b4b70",
+    "translation": false
+  },
+  {
     "id": "behind-the-product-goot-humanize-greetings",
     "title": "Behind The Product: Goot humanize greetings",
     "description": "Introducing `goot` — A nodejs module to help humanize greetings in different languages.",

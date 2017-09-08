@@ -3,7 +3,7 @@
 import isGithubRepo from 'is-github-repo'
 import gitUrlPrettify from 'git-url-prettify'
 
-import { colors, typography } from './../theme'
+import { colors, typography, phone } from './../theme'
 
 const GithubEmbed = ({ project, description }) => {
   const proj = isGithubRepo(project)
@@ -114,6 +114,16 @@ const GithubEmbed = ({ project, description }) => {
           transform: translateX(-20px);
           transition: all 0.2s ease;
           vertical-align: initial;
+        }
+
+        @media ${phone} {
+          .project {
+            width: 100%;
+          }
+
+          span {
+            display: none;
+          }
         }
       `}</style>
     </a>

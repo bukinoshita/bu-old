@@ -16,6 +16,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "copy-text-to-clipboard": "^1.0.3",
     "git-url-prettify": "^0.0.2",
     "goot": "^1.0.0",
     "is-github-repo": "^0.0.2",
