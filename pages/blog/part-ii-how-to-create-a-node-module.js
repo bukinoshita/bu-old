@@ -376,6 +376,10 @@ module.exports = async ({ size = 'small', topping = [] } = {}) => {
           it with a <Highlight>back-tick (``)</Highlight>.
         </P>
 
+        <H2>Check Part III</H2>
+
+        <BlogPost post="part-iii-how-to-create-a-node-module" />
+
         <Separator />
 
         <GithubEmbed

@@ -213,6 +213,8 @@ export default class PartIHowToCreateANodeModule extends Component {
 
         <BlogPost post="part-ii-how-to-create-a-node-module" />
 
+        <BlogPost post="part-iii-how-to-create-a-node-module" />
+
         <Separator />
 
         <GithubEmbed
