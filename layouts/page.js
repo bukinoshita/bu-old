@@ -46,7 +46,7 @@ const viewSource = event => {
 
 export default ({ children, color, isInverted = true }) => {
   const now = spacetime().hour()
-  const isLightMode = now > 17 || now < 6 ? null : 'light-mode'
+  const isLightMode = now >= 17 || now <= 6 ? null : 'light-mode'
   const lightMode = isInverted ? isLightMode : null
 
   return (
