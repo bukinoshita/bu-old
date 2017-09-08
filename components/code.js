@@ -3,7 +3,7 @@
 import { Component } from 'react'
 import c from 'copy-text-to-clipboard'
 
-import { colors, typography } from './../theme'
+import { colors, typography, phone } from './../theme'
 
 class Code extends Component {
   constructor() {
@@ -118,6 +118,12 @@ class Code extends Component {
 
           button:hover {
             opacity: 1;
+          }
+
+          @media ${phone} {
+            button {
+              display: none;
+            }
           }
         `}</style>
       </pre>
