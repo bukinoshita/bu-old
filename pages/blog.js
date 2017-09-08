@@ -22,7 +22,7 @@ class Blog extends Component {
       />
     )
     return (
-      <Page color="#000">
+      <Page>
         <Back />
 
         <Row>

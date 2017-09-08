@@ -3,6 +3,7 @@
 import Head from 'next/head'
 import Router from 'next/router'
 import Progress from 'nprogress'
+import spacetime from 'spacetime'
 
 import pkg from '../package'
 import { colors } from './../theme'
@@ -43,11 +44,16 @@ const viewSource = event => {
   event.preventDefault()
 }
 
-export default ({ children, color = '#000' }) => {
+export default ({ children, color, isInverted = true }) => {
+  const now = spacetime().hour()
+  const isLightMode = now > 17 || now < 6 ? null : 'light-mode'
+  const lightMode = isInverted ? isLightMode : null
+
   return (
     <main
       style={{ backgroundColor: color, minHeight: '100vh' }}
       onDoubleClick={viewSource}
+      className={lightMode}
     >
       <Head>
         <title>
@@ -97,6 +103,10 @@ export default ({ children, color = '#000' }) => {
               'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
           }
 
+          main {
+            background-color: ${colors.black};
+          }
+
           a {
             text-decoration: none;
           }
@@ -128,6 +138,12 @@ export default ({ children, color = '#000' }) => {
             box-shadow: 0 0 10px ${colors.white}, 0 2px 2px ${colors.black};
             opacity: 1;
             transform: rotate(3deg) translate(0px, -4px);
+          }
+
+          .light-mode,
+          .light-mode img,
+          .light-mode .cover {
+            filter: invert(100%);
           }
 
           svg {

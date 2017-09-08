@@ -39,7 +39,7 @@ class WorkExperience extends Component {
     ]
 
     return (
-      <Page color="#000">
+      <Page>
         <Back />
 
         <Row>

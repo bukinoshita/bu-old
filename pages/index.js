@@ -24,7 +24,7 @@ class Home extends Component {
     ).reverse()[0]
 
     return (
-      <Page color={colors.white}>
+      <Page color={colors.white} isInverted={false}>
         <div>
           <h1>bu kinoshita</h1>
           <h2>front-end engineer & ux designer</h2>
