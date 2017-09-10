@@ -49,6 +49,7 @@ const Back = ({ inversed = false, href = '/' }) => {
           left: 25px;
           cursor: pointer;
           transition: all 0.2s ease;
+          z-index: 1;
         }
 
         div:hover {
