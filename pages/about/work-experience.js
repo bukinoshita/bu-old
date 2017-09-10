@@ -1,7 +1,7 @@
 'use strict'
 
 import { Component } from 'react'
-import { getPackages, getDownloads } from 'npmstat'
+import { getDownloads } from 'npmstat'
 
 import Page from './../../layouts/page'
 import Row from './../../components/row'
@@ -14,16 +14,15 @@ import { colors, typography } from './../../theme'
 
 class WorkExperience extends Component {
   static async getInitialProps() {
-    const pkgs = await getPackages('bukinoshita')
     const { downloads } = await getDownloads('react-cookies', {
       range: '2016-01-01:2017-09-07'
     })
 
-    return { pkgs, downloads }
+    return { downloads }
   }
 
   render() {
-    const { pkgs, downloads } = this.props
+    const { downloads } = this.props
     const list = work.map(w => <Job key={w.company} data={w} />)
     const footnotes = [
       {
@@ -50,9 +49,7 @@ class WorkExperience extends Component {
             <p>
               <strong>open sourcerer:</strong> Developing a bunch of nodejs
               modules. I currently have{' '}
-              <a href="https://www.npmjs.com/~bukinoshita">
-                {pkgs.total || '90+'} packages
-              </a>{' '}
+              <a href="https://www.npmjs.com/~bukinoshita">91+ packages</a>{' '}
               published on npm and the most popular one is called{' '}
               <a href="https://github.com/bukinoshita/react-cookies">
                 react-cookies
