@@ -23,7 +23,7 @@ class WorkExperience extends Component {
   }
 
   render() {
-    const { pkgs: { total }, downloads } = this.props
+    const { pkgs, downloads } = this.props
     const list = work.map(w => <Job key={w.company} data={w} />)
     const footnotes = [
       {
@@ -51,13 +51,13 @@ class WorkExperience extends Component {
               <strong>open sourcerer:</strong> Developing a bunch of nodejs
               modules. I currently have{' '}
               <a href="https://www.npmjs.com/~bukinoshita">
-                {total} packages
+                {pkgs.total || '90+'} packages
               </a>{' '}
               published on npm and the most popular one is called{' '}
               <a href="https://github.com/bukinoshita/react-cookies">
                 react-cookies
               </a>{' '}
-              with <strong>{downloads} downloads</strong>.
+              with <strong>{downloads || '21K+'} downloads</strong>.
             </p>
 
             <p>
