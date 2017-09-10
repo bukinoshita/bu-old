@@ -13,7 +13,7 @@
     "description": "Let’s learn how to create a small and simple node module with some ES2015 features and more. This is part 2 where we code all parts to make it possible to make the pizza.",
     "date": "7 Sep 2017",
     "medium": "https://medium.com/the-zero/part-ii-how-to-create-a-node-module-5f3b1d3b4b70",
-    "translation": false
+    "translation": true
   },
   {
     "id": "part-i-how-to-create-a-node-module",

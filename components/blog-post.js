@@ -5,12 +5,13 @@ import Link from 'next/link'
 import { colors, typography, phone } from './../theme'
 import posts from './../data/posts'
 
-const BlogPost = ({ post }) => {
+const BlogPost = ({ post, isPt }) => {
   const { id, title, description } = posts.filter(({ id }) => id === post)[0]
   const cover = `/static/posts/${id}/cover.png`
+  const url = isPt ? `/blog/pt/${id}` : `/blog/${id}`
 
   return (
-    <Link href={`/blog/${id}`}>
+    <Link href={url}>
       <div className="post">
         <div className="post-info">
           <h4>
