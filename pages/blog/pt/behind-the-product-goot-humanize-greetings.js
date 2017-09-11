@@ -21,12 +21,11 @@ export default class GootHumanizeGreeting extends Component {
     const g = goot(now, 'pt')
     const greeting = g === 'dia' ? `bom ${g}` : `boa ${g}`
     const { url: { pathname } } = this.props
-    const url = pathname
-    const p = url.substring(9, pathname.length)
+    const p = pathname.substring(9, pathname.length)
     const post = posts.filter(({ id }) => id === p)[0]
 
     return (
-      <Post post={post} url={url}>
+      <Post post={post} url={pathname}>
         <P>
           Hey, <strong>{greeting}</strong>!
         </P>

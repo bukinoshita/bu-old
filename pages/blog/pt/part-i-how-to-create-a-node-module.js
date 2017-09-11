@@ -20,12 +20,11 @@ import posts from './../../../data/posts'
 export default class PartIHowToCreateANodeModule extends Component {
   render() {
     const { url: { pathname } } = this.props
-    const url = pathname
     const p = pathname.substring(9, pathname.length)
     const post = posts.filter(({ id }) => id === p)[0]
 
     return (
-      <Post post={post} url={url}>
+      <Post post={post} url={pathname}>
         <P>
           Vamos aprender como criar um pequeno e simples módulo em node com
           features do ES2015 e mais. Esse é a <Bold>parte 1</Bold> onde

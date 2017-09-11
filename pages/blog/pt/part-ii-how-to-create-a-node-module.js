@@ -22,7 +22,7 @@ export default class PartIIHowToCreateANodeModule extends Component {
     const post = posts.filter(({ id }) => id === p)[0]
 
     return (
-      <Post post={post}>
+      <Post post={post} url={pathname}>
         <P>
           Vamos aprender como criar um pequeno e simples módulo em node com
           features do ES2015 e mais. Esse é a <Bold>parte 2</Bold> onde vamos
