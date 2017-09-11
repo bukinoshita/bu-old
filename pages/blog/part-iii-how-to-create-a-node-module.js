@@ -18,7 +18,7 @@ import Separator from './../../components/separator'
 import BlogPost from './../../components/blog-post'
 import posts from './../../data/posts'
 
-export default class PartIIHowToCreateANodeModule extends Component {
+export default class PartIIIHowToCreateANodeModule extends Component {
   render() {
     const { url: { pathname } } = this.props
     const p = pathname.substring(6, pathname.length)
@@ -203,7 +203,7 @@ node_js:
         <P>
           language to be tested and the node versions to be tested. Since
           async/await was introduced on node v7.3 we don't want to run the tests
-          on node higher than 7. Otherwise, the tests will fail.
+          on node lower than 7. Otherwise, the tests will fail.
         </P>
 
         <P>
