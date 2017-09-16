@@ -1,15 +1,18 @@
 'use strict'
 
+import toId from 'to-id'
+
 import { colors, typography } from './../theme'
 
 const H2 = ({ children }) =>
   <h2>
-    {children}
+    <a href={`#${toId(children)}`} id={`${toId(children)}`}>
+      {children}
+    </a>
 
     <style jsx>{`
       h2 {
         font-size: ${typography.f22};
-        color: ${colors.white};
         margin-top: 20px;
         margin-bottom: 25px;
         position: relative;
@@ -23,6 +26,10 @@ const H2 = ({ children }) =>
         color: ${colors.subtitle};
         position: absolute;
         left: -20px;
+      }
+
+      a {
+        color: ${colors.white};
       }
     `}</style>
   </h2>
