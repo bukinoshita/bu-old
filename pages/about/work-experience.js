@@ -49,7 +49,7 @@ class WorkExperience extends Component {
             <p>
               <strong>open sourcerer:</strong> Developing a bunch of nodejs
               modules. I currently have{' '}
-              <a href="https://www.npmjs.com/~bukinoshita">91+ packages</a>{' '}
+              <a href="https://www.npmjs.com/~bukinoshita">99+ packages</a>{' '}
               published on npm and the most popular one is called{' '}
               <a href="https://github.com/bukinoshita/react-cookies">
                 react-cookies
