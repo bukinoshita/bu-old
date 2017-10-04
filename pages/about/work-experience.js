@@ -15,7 +15,7 @@ import { colors, typography } from './../../theme'
 class WorkExperience extends Component {
   static async getInitialProps() {
     const { downloads } = await getDownloads('react-cookies', {
-      range: '2016-01-01:2017-09-26'
+      range: '2016-01-01:2017-10-04'
     })
 
     return { downloads }
