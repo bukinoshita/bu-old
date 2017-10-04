@@ -1,6 +1,6 @@
 {
   "name": "bukinoshita",
-  "version": "0.5.5",
+  "version": "0.5.6",
   "description": "full-time open sourcerer and nomad",
   "repository": {
     "url": "https://github.com/bukinoshita/bu",
@@ -69,6 +69,10 @@
     ]
   },
   "now": {
-    "alias": "bukinoshita.io"
+    "alias": "bukinoshita.io",
+    "env": {
+      "NODE_ENV": "production"
+    },
+    "dotenv": ".env"
   }
 }
