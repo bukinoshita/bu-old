@@ -16,6 +16,8 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "babel-plugin-inline-dotenv": "^1.1.1",
+    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
     "copy-text-to-clipboard": "^1.0.3",
     "git-url-prettify": "^0.0.2",
     "goot": "^1.0.0",

@@ -11,15 +11,16 @@ import { colors, typography } from './../theme'
 class Home extends Component {
   static async getInitialProps() {
     const res = await fetch(
-      'https://api.github.com/users/bukinoshita/repos?per_page=100'
+      `https://api.github.com/users/bukinoshita/repos?per_page=100&access_token=${process
+        .env.ACCESS_TOKEN}`
     )
     const json = await res.json()
-    return { stars: json }
+    return { repos: json }
   }
 
   render() {
     const { name, html_url } = sortArr(
-      this.props.stars,
+      this.props.repos,
       'pushed_at'
     ).reverse()[0]
 
