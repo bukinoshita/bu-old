@@ -15,7 +15,7 @@ import { colors, typography } from './../../theme'
 class WorkExperience extends Component {
   static async getInitialProps() {
     const { downloads } = await getDownloads('react-cookies', {
-      range: '2016-01-01:2017-10-04'
+      range: '2016-01-01:2017-10-05'
     })
 
     return { downloads }
@@ -49,7 +49,9 @@ class WorkExperience extends Component {
             <p>
               <strong>open sourcerer:</strong> Developing a bunch of nodejs
               modules. I currently have{' '}
-              <a href="https://www.npmjs.com/~bukinoshita">99+ packages</a>{' '}
+              <a href="https://www.npmjs.com/~bukinoshita">
+                100+ packages
+              </a>{' '}
               published on npm and the most popular one is called{' '}
               <a href="https://github.com/bukinoshita/react-cookies">
                 react-cookies
