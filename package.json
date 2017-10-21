@@ -58,7 +58,8 @@
       "react/prop-types": 0,
       "import/no-unassigned-import": 0,
       "camelcase": 0,
-      "react/no-unescaped-entities": 0
+      "react/no-unescaped-entities": 0,
+      "new-cap": 0
     }
   },
   "lint-staged": {

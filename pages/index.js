@@ -4,7 +4,6 @@ import { Component } from 'react'
 import 'isomorphic-fetch'
 import sortArr from 'sort-arr'
 import Link from 'next/link'
-
 import Page from './../layouts/page'
 import { colors, typography } from './../theme'
 

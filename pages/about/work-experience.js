@@ -2,6 +2,7 @@
 
 import { Component } from 'react'
 import { getDownloads } from 'npmstat'
+import spacetime from 'spacetime'
 
 import Page from './../../layouts/page'
 import Row from './../../components/row'
@@ -14,8 +15,13 @@ import { colors, typography } from './../../theme'
 
 class WorkExperience extends Component {
   static async getInitialProps() {
+    const s = new spacetime(new Date())
+    const d = s.date()
+    const m = s.month() + 1
+    const y = s.year()
+
     const { downloads } = await getDownloads('react-cookies', {
-      range: '2016-01-01:2017-10-07'
+      range: `2016-01-01:${y}-${m}-${d}`
     })
 
     return { downloads }
