@@ -1,6 +1,6 @@
 {
   "name": "bukinoshita",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "description": "full-time open sourcerer and nomad",
   "repository": {
     "url": "https://github.com/bukinoshita/bu",
@@ -8,7 +8,24 @@
   },
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
-  "keywords": ["bu", "kinoshita", "bukinoshita", "personal", "website", "portfolio", "front", "programming", "design", "ux", "user", "experience", "javascript", "js", "node", "nodejs"],
+  "keywords": [
+    "bu",
+    "kinoshita",
+    "bukinoshita",
+    "personal",
+    "website",
+    "portfolio",
+    "front",
+    "programming",
+    "design",
+    "ux",
+    "user",
+    "experience",
+    "javascript",
+    "js",
+    "node",
+    "nodejs"
+  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
