@@ -8,6 +8,7 @@
   },
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
+  "keywords": ["bu", "kinoshita", "bukinoshita", "personal", "website", "portfolio", "front", "programming", "design", "ux", "user", "experience", "javascript", "js", "node", "nodejs"],
   "scripts": {
     "dev": "next",
     "build": "next build",
