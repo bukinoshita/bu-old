@@ -67,9 +67,7 @@ class WorkExperience extends Component {
 
             <p>
               <strong>entrepreneur: </strong>Building{' '}
-              <a href="https://franz.sh">franz</a> and{' '}
-              <a href="https://inkblee.com">inkblee</a> by myself and with
-              friends.
+              <a href="https://hackdisrupt.now.sh">hackdisrupt</a> by myself.
             </p>
 
             <p className="italic">
