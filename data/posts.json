@@ -1,5 +1,13 @@
 [
   {
+    "id": "introducing-secret",
+    "title": "Introducing secret",
+    "description": "send a message through a safe, private, and encrypted link that automatically expires to ensure your stuff does not remain online forever.",
+    "date": "29 Nov 2017",
+    "medium": "https://medium.com/@bukinoshita/introducing-secret-100b5d95acfb",
+    "translation": false
+  },
+  {
     "id": "part-iii-how-to-create-a-node-module",
     "title": "Part III: How to create a node module",
     "description": "Let’s learn how to create a small and simple node module with some ES2015 features and more. This is part 3 where I will cover tests, continuous integration and publishing a node module.",
