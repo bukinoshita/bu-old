@@ -31,9 +31,7 @@ class Home extends Component {
           <h2>front-end engineer & ux designer</h2>
 
           <h3>
-            &gt; currently working on{' '}
-            <a href="https://hackdisrupt.now.sh">hackdisrupt</a> and{' '}
-            <a href={html_url}>{name}</a>.
+            &gt; currently working on <a href={html_url}>{name}</a>.
           </h3>
 
           <footer>
