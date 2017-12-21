@@ -47,6 +47,11 @@ class Home extends Component {
                 </Link>/
               </li>
               <li>
+                <Link href="/projects" prefetch>
+                  <span>projects</span>
+                </Link>/
+              </li>
+              <li>
                 <a href="https://twitter.com/bukinoshita">twitter</a>/
               </li>
               <li>

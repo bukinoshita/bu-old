@@ -77,7 +77,8 @@
       "import/no-unassigned-import": 0,
       "camelcase": 0,
       "react/no-unescaped-entities": 0,
-      "new-cap": 0
+      "new-cap": 0,
+      "array-callback-return": 0
     }
   },
   "lint-staged": {
