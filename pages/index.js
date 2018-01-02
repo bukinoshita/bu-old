@@ -2,7 +2,6 @@
 
 import { Component } from 'react'
 import 'isomorphic-fetch'
-import sortArr from 'sort-arr'
 import Link from 'next/link'
 
 import Page from './../layouts/page'
@@ -11,18 +10,15 @@ import { colors, typography } from './../theme'
 class Home extends Component {
   static async getInitialProps() {
     const res = await fetch(
-      `https://api.github.com/users/bukinoshita/repos?per_page=100&access_token=${process
+      `https://api.github.com/user/repos?per_page=100&sort=pushed&access_token=${process
         .env.ACCESS_TOKEN}`
     )
     const json = await res.json()
-    return { repos: json }
+    return { repo: json[0] }
   }
 
   render() {
-    const { name, html_url } = sortArr(
-      this.props.repos,
-      'pushed_at'
-    ).reverse()[0]
+    const { name, html_url } = this.props.repo
 
     return (
       <Page color={colors.white} isInverted={false}>
