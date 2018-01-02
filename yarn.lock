@@ -4271,10 +4271,6 @@ sntp@1.x.x:
   dependencies:
     hoek "2.x.x"
 
-sort-arr@^0.0.2:
-  version "0.0.2"
-  resolved "https://registry.yarnpkg.com/sort-arr/-/sort-arr-0.0.2.tgz#66e6239b04320247687ab0d9a6e2669e25c27e05"
-
 sort-keys@^1.1.1, sort-keys@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/sort-keys/-/sort-keys-1.1.2.tgz#441b6d4d346798f1b4e49e8920adfba0e543f9ad"

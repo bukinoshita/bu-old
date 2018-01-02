@@ -2,7 +2,6 @@
 
 import { Component } from 'react'
 import 'isomorphic-fetch'
-import sortArr from 'sort-arr'
 
 import Page from './../layouts/page'
 import Row from './../components/row'
@@ -13,7 +12,7 @@ import { colors, typography } from './../theme'
 class Projects extends Component {
   static async getInitialProps() {
     const res = await fetch(
-      `https://api.github.com/users/bukinoshita/repos?per_page=100&access_token=${process
+      `https://api.github.com/user/repos?per_page=100&sort=pushed&access_token=${process
         .env.ACCESS_TOKEN}`
     )
     const json = await res.json()
@@ -21,13 +20,11 @@ class Projects extends Component {
   }
 
   render() {
-    const projects = sortArr(this.props.repos, 'pushed_at')
-      .reverse()
-      .map((project, index) => {
-        if (index <= 10) {
-          return <Project data={project} />
-        }
-      })
+    const projects = this.props.repos.map((project, index) => {
+      if (index <= 20 && !project.private) {
+        return <Project data={project} />
+      }
+    })
 
     return (
       <Page>

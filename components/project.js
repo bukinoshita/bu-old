@@ -67,6 +67,8 @@ const Project = ({ data }) => {
           color: ${colors.subtitle};
           font-size: 12px;
           margin-top: 5px;
+          line-height: 18px;
+          font-weight: 400;
         }
       `}</style>
     </li>
