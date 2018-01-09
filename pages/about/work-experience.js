@@ -67,10 +67,13 @@ class WorkExperience extends Component {
 
             <p>
               <strong>entrepreneur: </strong>Building{' '}
-              <a href="https://getsecret.now.sh">secret</a> (#3 Product of the
-              Day on{' '}
+              <a href="https://gettaskr.now.sh">Taskr</a> (#1 Product of the Day
+              and #5 Product of the Week on{' '}
+              <a href="https://producthunt.com/posts/taskr">Product Hunt</a>)
+              and <a href="https://getsecret.now.sh">secret</a> (#4 Product of
+              the Day on{' '}
               <a href="https://www.producthunt.com/posts/secret-3">
-                ProductHunt
+                Product Hunt
               </a>) and{' '}
               <a href="https://github.com/bukinoshita">other projects</a>.
             </p>
