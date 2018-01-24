@@ -1,5 +1,13 @@
 [
   {
+    "id": "introducing-taskr-a-simple-task-manager-app",
+    "title": "Introducing Taskr a simple task manager app",
+    "description": "How I built Taskr and how it is the #1 product on Product Hunt",
+    "date": "8 Jan 2018",
+    "medium": "https://medium.com/@bukinoshita/introducing-taskr-a-simple-task-manager-app-f1d046457585",
+    "translation": false
+  },
+  {
     "id": "introducing-secret",
     "title": "Introducing secret",
     "description": "send a message through a safe, private, and encrypted link that automatically expires to ensure your stuff does not remain online forever.",
