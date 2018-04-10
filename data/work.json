@@ -1,7 +1,25 @@
 [
   {
+    "role": "Senior Developer",
+    "company": "IDwall",
+    "from": "February, 2018",
+    "to": "Current",
+    "location": "São Paulo",
+    "remote": false,
+    "freelance": false
+  },
+  {
     "role": "Senior Front-end Engineer",
     "company": "Boxes",
+    "from": "December, 2016",
+    "to": "April, 2017",
+    "location": "New York",
+    "remote": true,
+    "freelance": false
+  },
+  {
+    "role": "Senior Front-end Engineer",
+    "company": "Tradeshow",
     "from": "December, 2016",
     "to": "April, 2017",
     "location": "New York",
