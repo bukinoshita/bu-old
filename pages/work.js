@@ -9,12 +9,12 @@ import Page from './../layouts/page'
 // UI
 import Row from './../ui/row'
 
-const Projects = () => {
+const Work = () => {
   return (
-    <Page title="Projects">
+    <Page title="Work">
       <Row />
     </Page>
   )
 }
 
-export default Projects
+export default Work
