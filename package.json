@@ -36,5 +36,12 @@
   "xo": {
     "extends": ["prettier", "prettier/react", "plugin:react/recommended"],
     "rules": {}
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run test",
+      "prettier --semi false --single-quote --write",
+      "git add"
+    ]
   }
 }
