@@ -4,6 +4,7 @@
 import React from 'react'
 import Progress from 'nprogress'
 import Router from 'next/router'
+import PropTypes from 'prop-types'
 
 // Components
 import Header from './../components/header'
@@ -109,6 +110,11 @@ const App = ({ children, hasHeader }) => {
 
 App.defaultProps = {
   hasHeader: true
+}
+
+App.propTypes = {
+  children: PropTypes.any,
+  hasHeader: PropTypes.bool
 }
 
 export default App

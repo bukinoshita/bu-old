@@ -2,6 +2,7 @@
 
 // Packages
 import React from 'react'
+import PropTypes from 'prop-types'
 
 // Layouts
 import App from './../layouts/app'
@@ -48,6 +49,11 @@ const Page = ({ children, title }) => {
       `}</style>
     </App>
   )
+}
+
+Page.propTypes = {
+  children: PropTypes.any,
+  title: PropTypes.string.isRequired
 }
 
 export default Page

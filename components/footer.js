@@ -13,7 +13,19 @@ const Footer = () => {
   return (
     <footer>
       <Row>
-        <p>Made with love</p>
+        <ul>
+          <li>
+            <a href="https://github.com/bukinoshita">Github</a>
+          </li>
+
+          <li>
+            <a href="https://twitter.com/bukinoshita">Twitter</a>
+          </li>
+
+          <li>
+            <a href="https://medium.com/bukinoshita">Medium</a>
+          </li>
+        </ul>
       </Row>
 
       <style jsx>{`
@@ -23,7 +35,13 @@ const Footer = () => {
           text-align: center;
         }
 
-        p {
+        li {
+          display: inline-block;
+          margin-right: 6px;
+          margin-left: 6px;
+        }
+
+        a {
           color: ${colors.white};
         }
       `}</style>

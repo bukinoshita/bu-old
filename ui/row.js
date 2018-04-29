@@ -2,6 +2,7 @@
 
 // Packages
 import React from 'react'
+import PropTypes from 'prop-types'
 
 const Row = ({ children }) => {
   return (
@@ -17,6 +18,10 @@ const Row = ({ children }) => {
       `}</style>
     </div>
   )
+}
+
+Row.propTypes = {
+  children: PropTypes.any
 }
 
 export default Row

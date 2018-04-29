@@ -17,9 +17,6 @@ import Row from './../ui/row'
 // HOC
 import withData from './../hoc/with-data'
 
-// Theme
-import { colors } from './../theme'
-
 const Essays = ({ data }) => {
   const { posts } = data
 

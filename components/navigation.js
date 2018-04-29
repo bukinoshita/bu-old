@@ -3,6 +3,7 @@
 // Packages
 import React from 'react'
 import Link from 'next/link'
+import PropTypes from 'prop-types'
 
 // Theme
 import { colors } from './../theme'
@@ -73,6 +74,14 @@ const Navigation = ({ home }) => {
       `}</style>
     </nav>
   )
+}
+
+Navigation.defaultProps = {
+  home: true
+}
+
+Navigation.propTypes = {
+  home: PropTypes.bool
 }
 
 export default Navigation

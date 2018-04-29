@@ -2,7 +2,9 @@
 
 // Packages
 import React from 'react'
+import PropTypes from 'prop-types'
 
+// Components
 import Post from './post'
 
 const Posts = ({ posts }) => {
@@ -21,6 +23,10 @@ const Posts = ({ posts }) => {
       `}</style>
     </ul>
   )
+}
+
+Posts.propTypes = {
+  posts: PropTypes.arrayOf(PropTypes.object)
 }
 
 export default Posts
