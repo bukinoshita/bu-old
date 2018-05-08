@@ -77,7 +77,7 @@ const Navigation = ({ home }) => {
 }
 
 Navigation.defaultProps = {
-  home: true
+  home: false
 }
 
 Navigation.propTypes = {

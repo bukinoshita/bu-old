@@ -18,20 +18,16 @@ import Row from './../ui/row'
 import withData from './../hoc/with-data'
 
 const Essays = ({ data }) => {
-  const { posts } = data
-
   return (
     <Page title="Essays">
-      <Row>
-        <Posts posts={posts} />
-      </Row>
+      <Row />
     </Page>
   )
 }
 
-export const allPosts = gql`
-  query allPosts($username: String!, $limit: Int) {
-    posts(username: $username, limit: $limit) {
+export const getEssays = gql`
+  query getEssays {
+    essays {
       title
       subtitle
       url
@@ -39,16 +35,9 @@ export const allPosts = gql`
   }
 `
 
-export const allPostsQueryVars = {
-  username: 'bukinoshita',
-  first: 10
-}
-
 export default withData(
-  graphql(allPosts, {
-    options: {
-      variables: allPostsQueryVars
-    },
+  graphql(getEssays, {
+    options: {},
     props: ({ data }) => ({
       data
     })
