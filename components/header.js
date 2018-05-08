@@ -23,6 +23,7 @@ const Header = () => {
           position: sticky;
           top: 0;
           background-color: ${colors.black};
+          z-index: 1;
         }
       `}</style>
     </header>
