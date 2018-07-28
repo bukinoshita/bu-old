@@ -17,17 +17,7 @@ const Navigation = ({ home }) => {
         </Link>
       ) : null}
 
-      <Link href="/projects" prefetch>
-        <a>Projects</a>
-      </Link>
-
-      <Link href="/essays" prefetch>
-        <a>Essays</a>
-      </Link>
-
-      <Link href="/talks" prefetch>
-        <a>Talks</a>
-      </Link>
+      <a href="https://medium.com/@bukinoshita/latest">Essays</a>
 
       <Link href="/work" prefetch>
         <a>Work</a>

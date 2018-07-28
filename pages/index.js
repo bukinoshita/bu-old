@@ -21,7 +21,7 @@ const Home = () => {
       <section>
         <div>
           <h1>Bu Kinoshita</h1>
-          <h2>Front-end Engineer & UX Designer</h2>
+          <h2>Software Engineer & UX Designer</h2>
 
           <Navigation />
         </div>
