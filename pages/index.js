@@ -1,130 +1,65 @@
 'use strict'
 
-import { Component } from 'react'
-import 'isomorphic-fetch'
-import Link from 'next/link'
+// Packages
+import React from 'react'
 
-import Page from './../layouts/page'
-import { colors, typography } from './../theme'
+// Components
+import Navigation from './../components/navigation'
 
-class Home extends Component {
-  static async getInitialProps() {
-    const res = await fetch(
-      `https://api.github.com/user/repos?per_page=100&sort=pushed&access_token=${process
-        .env.ACCESS_TOKEN}`
-    )
-    const json = await res.json()
-    return { repo: json[0] }
-  }
+// Layouts
+import App from './../layouts/app'
 
-  render() {
-    const { name, html_url } = this.props.repo
+// Components
+import Footer from './../components/footer'
 
-    return (
-      <Page color={colors.white} isInverted={false}>
+// Theme
+import { colors } from './../theme'
+
+const Home = () => {
+  return (
+    <App hasHeader={false}>
+      <section>
         <div>
-          <h1>bu kinoshita</h1>
-          <h2>front-end engineer & ux designer</h2>
+          <h1>Bu Kinoshita</h1>
+          <h2>Software Engineer & UX Designer</h2>
 
-          <h3>
-            &gt; currently working on <a href={html_url}>{name}</a>.
-          </h3>
-
-          <footer>
-            <ul>
-              <li>
-                <Link href="/about/work-experience" prefetch>
-                  <span>work</span>
-                </Link>/
-              </li>
-              <li>
-                <Link href="/blog" prefetch>
-                  <span>blog</span>
-                </Link>/
-              </li>
-              <li>
-                <Link href="/projects" prefetch>
-                  <span>projects</span>
-                </Link>/
-              </li>
-              <li>
-                <a href="https://twitter.com/bukinoshita">twitter</a>/
-              </li>
-              <li>
-                <a href="https://github.com/bukinoshita">github</a>/
-              </li>
-              <li>
-                <a href="https://dribbble.com/bukinoshita">dribbble</a>
-              </li>
-            </ul>
-          </footer>
-
-          <style jsx>
-            {`
-              div {
-                padding: 100px;
-                min-height: 100vh;
-                display: flex;
-                justify-content: flex-end;
-                flex-direction: column;
-              }
-
-              h2 {
-                color: ${colors.subtitle};
-                line-height: 30px;
-              }
-
-              ul {
-                display: flex;
-                margin-top: 25px;
-              }
-
-              li {
-                font-size: 13px;
-                color: ${colors.subtitle};
-                padding-right: 5px;
-              }
-
-              a,
-              span {
-                color: ${colors.subtitle};
-                margin-right: 5px;
-                cursor: pointer;
-              }
-
-              a:hover,
-              span:hover {
-                color: ${colors.black};
-              }
-
-              h3 {
-                font-weight: ${typography.regular};
-                font-size: 14px;
-                color: ${colors.subtitle};
-                margin-top: 16px;
-              }
-
-              h3 a {
-                font-weight: ${typography.bold};
-                color: ${colors.black};
-                margin-right: 0;
-              }
-
-              h3 a:hover {
-                text-decoration: underline;
-              }
-
-              @media (max-width: 500px) {
-                div {
-                  padding: 45px;
-                }
-              }
-            `}
-          </style>
+          <Navigation />
         </div>
-      </Page>
-    )
-  }
+      </section>
+
+      <Footer />
+
+      <style jsx>{`
+        section {
+          display: flex;
+          align-items: center;
+          min-height: calc(100vh - 100px);
+          text-align: center;
+        }
+
+        div {
+          width: 100%;
+        }
+
+        h1 {
+          color: ${colors.white};
+          font-weight: 700;
+          letter-spacing: 2px;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+
+        h2 {
+          color: ${colors.white};
+          font-weight: 400;
+          letter-spacing: 2px;
+          text-align: center;
+          opacity: 0.5;
+          margin-bottom: 20px;
+        }
+      `}</style>
+    </App>
+  )
 }
 
 export default Home

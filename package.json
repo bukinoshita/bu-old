@@ -1,31 +1,11 @@
 {
-  "name": "bukinoshita",
-  "version": "0.6.4",
-  "description": "full-time open sourcerer and nomad",
-  "repository": {
-    "url": "https://github.com/bukinoshita/bu",
-    "type": "git"
-  },
+  "name": "bu",
+  "version": "1.0.0",
+  "description": "Front-end engineer & UX Designer",
+  "main": "index.js",
+  "repository": "https://github.com/bukinoshita/bu.git",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
   "license": "MIT",
-  "keywords": [
-    "bu",
-    "kinoshita",
-    "bukinoshita",
-    "personal",
-    "website",
-    "portfolio",
-    "front",
-    "programming",
-    "design",
-    "ux",
-    "user",
-    "experience",
-    "javascript",
-    "js",
-    "node",
-    "nodejs"
-  ],
   "scripts": {
     "dev": "next",
     "build": "next build",
@@ -34,29 +14,23 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "babel-plugin-inline-dotenv": "^1.1.1",
-    "babel-plugin-transform-inline-environment-variables": "^0.2.0",
-    "copy-text-to-clipboard": "^1.0.3",
-    "git-url-prettify": "^0.0.2",
-    "goot": "^1.0.0",
-    "is-github-repo": "^0.0.2",
-    "isomorphic-fetch": "^2.2.1",
+    "apollo-boost": "^0.1.4",
+    "graphql": "^0.13.2",
+    "graphql-tag": "^2.9.1",
+    "isomorphic-unfetch": "^2.0.0",
     "next": "^5.1.0",
-    "now": "11.1.2",
-    "npmstat": "^1.0.1",
     "nprogress": "^0.2.0",
-    "react": "^16.3.1",
-    "react-dom": "^16.3.1",
-    "spacetime": "^1.3.1",
-    "to-id": "^1.0.5"
+    "prop-types": "^15.6.1",
+    "react-apollo": "^2.1.3",
+    "react-dom": "^16.3.2"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^2.3.0",
-    "eslint-plugin-react": "^7.2.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-react": "^7.7.0",
     "husky": "^0.14.3",
-    "lint-staged": "^4.0.3",
-    "prettier": "^1.5.3",
-    "xo": "^0.18.2"
+    "lint-staged": "^7.0.5",
+    "prettier": "^1.12.1",
+    "xo": "^0.20.3"
   },
   "xo": {
     "extends": [
@@ -64,35 +38,13 @@
       "prettier/react",
       "plugin:react/recommended"
     ],
-    "env": [
-      "browser",
-      "node"
-    ],
-    "rules": {
-      "react/display-name": 0,
-      "react/react-in-jsx-scope": 0,
-      "import/named": 0,
-      "import/no-extraneous-dependencies": 0,
-      "react/prop-types": 0,
-      "import/no-unassigned-import": 0,
-      "camelcase": 0,
-      "react/no-unescaped-entities": 0,
-      "new-cap": 0,
-      "array-callback-return": 0
-    }
+    "rules": {}
   },
   "lint-staged": {
     "*.js": [
-      "npm run test",
+      "yarn test",
       "prettier --semi false --single-quote --write",
       "git add"
     ]
-  },
-  "now": {
-    "alias": "bukinoshita.io",
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "dotenv": ".env"
   }
 }

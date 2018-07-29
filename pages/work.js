@@ -4,9 +4,13 @@
 import React from 'react'
 import { graphql } from 'react-apollo'
 import gql from 'graphql-tag'
+import PropTypes from 'prop-types'
 
 // Layouts
 import Page from './../layouts/page'
+
+// Components
+import Works from './../components/work'
 
 // UI
 import Row from './../ui/row'
@@ -14,18 +18,16 @@ import Row from './../ui/row'
 // HOC
 import withData from './../hoc/with-data'
 
-// Theme
+// THeme
 import { colors } from './../theme'
 
-const Projects = ({ data }) => {
-  const { projects } = data
+const Work = ({ data }) => {
+  const { work } = data
 
   return (
-    <Page title="Projects">
+    <Page title="Work">
       <Row>
-        {projects.map(({ title }) => {
-          return <li key={title}>{title}</li>
-        })}
+        <Works work={work} />
       </Row>
 
       <style jsx>{`
@@ -38,19 +40,29 @@ const Projects = ({ data }) => {
   )
 }
 
-export const getProjects = gql`
-  query getProjects {
-    projects {
-      title
+Work.propTypes = {
+  data: PropTypes.object
+}
+
+export const getWork = gql`
+  query getWork {
+    work {
+      role
+      company
+      from
+      to
+      location
+      remote
+      description
     }
   }
 `
 
 export default withData(
-  graphql(getProjects, {
+  graphql(getWork, {
     options: {},
     props: ({ data }) => ({
       data
     })
-  })(Projects)
+  })(Work)
 )
