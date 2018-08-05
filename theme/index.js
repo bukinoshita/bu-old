@@ -2,7 +2,7 @@
 
 export const colors = {
   white: '#FFFFFF',
-  black: '#000000',
+  black: '#0E1012',
   subtitle: '#ABABAB'
 }
 
