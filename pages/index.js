@@ -9,9 +9,6 @@ import Navigation from './../components/navigation'
 // Layouts
 import App from './../layouts/app'
 
-// Components
-import Footer from './../components/footer'
-
 // Theme
 import { colors } from './../theme'
 
@@ -27,13 +24,11 @@ const Home = () => {
         </div>
       </section>
 
-      <Footer />
-
       <style jsx>{`
         section {
           display: flex;
           align-items: center;
-          min-height: calc(100vh - 100px);
+          min-height: calc(100vh);
           text-align: center;
         }
 

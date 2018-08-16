@@ -17,11 +17,11 @@ const Navigation = ({ home }) => {
         </Link>
       ) : null}
 
-      <a href="https://medium.com/@bukinoshita/latest">Essays</a>
+      <a href="https://github.com/bukinoshita">Github</a>
 
-      <Link href="/work" prefetch>
-        <a>Work</a>
-      </Link>
+      <a href="https://twitter.com/bukinoshita">Twitter</a>
+
+      <a href="https://medium.com/@bukinoshita/latest">Medium</a>
 
       <style jsx>{`
         nav {
