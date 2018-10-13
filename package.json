@@ -1,7 +1,7 @@
 {
   "name": "bu",
   "version": "1.0.1",
-  "description": "Front-end engineer & UX Designer",
+  "description": "Software Engineer & UX Designer",
   "main": "index.js",
   "repository": "https://github.com/bukinoshita/bu.git",
   "author": "Bu Kinoshita <bukinoshita@gmail.com>",
@@ -14,24 +14,18 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
-    "apollo-boost": "^0.1.4",
-    "graphql": "^0.13.2",
-    "graphql-tag": "^2.9.1",
-    "isomorphic-unfetch": "^2.0.0",
-    "next": "^5.1.0",
-    "nprogress": "^0.2.0",
-    "prop-types": "^15.6.1",
-    "react": "^16.4.2",
-    "react-apollo": "^2.1.3",
-    "react-dom": "^16.3.2"
+    "next": "^7.0.2",
+    "prop-types": "^15.6.2",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2"
   },
   "devDependencies": {
-    "eslint-config-prettier": "^2.9.0",
-    "eslint-plugin-react": "^7.7.0",
-    "husky": "^0.14.3",
-    "lint-staged": "^7.0.5",
-    "prettier": "^1.12.1",
-    "xo": "^0.20.3"
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-plugin-react": "^7.11.1",
+    "husky": "^1.1.2",
+    "lint-staged": "^7.3.0",
+    "prettier": "^1.14.3",
+    "xo": "^0.23.0"
   },
   "xo": {
     "extends": [
@@ -43,8 +37,8 @@
   },
   "lint-staged": {
     "*.js": [
-      "yarn test",
       "prettier --semi false --single-quote --write",
+      "yarn test",
       "git add"
     ]
   }
