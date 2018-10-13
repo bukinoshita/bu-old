@@ -4,17 +4,17 @@
 import React from 'react'
 
 // Components
-import Navigation from './../components/navigation'
+import Navigation from '../components/navigation'
 
 // Layouts
-import App from './../layouts/app'
+import App from '../layouts/app'
 
 // Theme
-import { colors } from './../theme'
+import { colors } from '../theme'
 
 const Home = () => {
   return (
-    <App hasHeader={false}>
+    <App>
       <section>
         <div>
           <h1>Bu Kinoshita</h1>

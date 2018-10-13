@@ -2,31 +2,36 @@
 
 // Packages
 import React from 'react'
-import Link from 'next/link'
 import PropTypes from 'prop-types'
 
 // Theme
-import { colors } from './../theme'
+import { colors } from '../theme'
 
-const Navigation = ({ home }) => {
+const Navigation = () => {
   return (
     <nav>
-      {home ? (
-        <Link href="/" prefetch>
-          <a>Home</a>
-        </Link>
-      ) : null}
+      <ul>
+        <li>
+          <a href="https://github.com/bukinoshita">Github</a>
+        </li>
 
-      <a href="https://github.com/bukinoshita">Github</a>
+        <li>
+          <a href="https://twitter.com/bukinoshita">Twitter</a>
+        </li>
 
-      <a href="https://twitter.com/bukinoshita">Twitter</a>
-
-      <a href="https://medium.com/@bukinoshita/latest">Medium</a>
+        <li>
+          <a href="https://medium.com/bukinoshita">Medium</a>
+        </li>
+      </ul>
 
       <style jsx>{`
         nav {
           text-align: center;
           width: 100%;
+        }
+
+        li {
+          display: inline-block;
         }
 
         a {
