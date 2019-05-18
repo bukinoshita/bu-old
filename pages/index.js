@@ -1,5 +1,3 @@
-'use strict'
-
 // Packages
 import React from 'react'
 

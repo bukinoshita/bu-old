@@ -1,5 +1,3 @@
-'use strict'
-
 export const colors = {
   white: '#FFFFFF',
   black: '#0E1012',
