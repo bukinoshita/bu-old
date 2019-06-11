@@ -55,8 +55,8 @@ const App = ({ children }) => {
             margin: 0;
             -webkit-font-smoothing: antialiased;
             box-sizing: border-box;
-            font-family: 'Avenir Next', -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI',
-              Roboto, 'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
+              'Helvetica Neue', Arial, sans-serif;
           }
 
           body {

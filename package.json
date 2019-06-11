@@ -21,9 +21,9 @@
   "devDependencies": {
     "eslint-config-prettier": "^4.3.0",
     "eslint-plugin-react": "^7.13.0",
-    "husky": "^2.3.0",
-    "lint-staged": "^8.1.7",
-    "prettier": "^1.17.1",
+    "husky": "^2.4.0",
+    "lint-staged": "^8.2.0",
+    "prettier": "^1.18.2",
     "xo": "^0.24.0"
   },
   "xo": {
