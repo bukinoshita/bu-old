@@ -18,7 +18,7 @@ const Navigation = () => {
         </li>
 
         <li>
-          <a href="https://medium.com/bukinoshita">Medium</a>
+          <a href="https://medium.com/@bukinoshita">Medium</a>
         </li>
       </ul>
 
