@@ -13,7 +13,7 @@
     "test": "xo"
   },
   "dependencies": {
-    "next": "^8.1.0",
+    "next": "^9.0.0",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
@@ -21,8 +21,8 @@
   "devDependencies": {
     "eslint-config-prettier": "6.0.0",
     "eslint-plugin-react": "7.14.2",
-    "husky": "2.7.0",
-    "lint-staged": "9.0.1",
+    "husky": "^3.0.0",
+    "lint-staged": "^9.1.0",
     "prettier": "1.18.2",
     "xo": "0.24.0"
   },
