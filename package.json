@@ -21,7 +21,7 @@
   "devDependencies": {
     "eslint-config-prettier": "6.9.0",
     "eslint-plugin-react": "7.18.0",
-    "husky": "4.0.10",
+    "husky": "4.2.1",
     "lint-staged": "10.0.2",
     "prettier": "1.19.1",
     "xo": "0.25.3"
