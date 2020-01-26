@@ -1,11 +1,8 @@
-// Packages
 import React from 'react'
-import PropTypes from 'prop-types'
 
-// Theme
-import { colors } from '../theme'
+import { colors } from '../../ui/theme'
 
-const Navigation = () => {
+export const Navigation = () => {
   return (
     <nav>
       <ul>
@@ -68,13 +65,3 @@ const Navigation = () => {
     </nav>
   )
 }
-
-Navigation.defaultProps = {
-  home: false
-}
-
-Navigation.propTypes = {
-  home: PropTypes.bool
-}
-
-export default Navigation
