@@ -13,17 +13,19 @@
     "test": "xo"
   },
   "dependencies": {
-    "next": "^9.0.0",
-    "prop-types": "^15.7.2",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6"
+    "next": "9.2.1",
+    "react": "16.12.0",
+    "react-dom": "16.12.0"
   },
   "devDependencies": {
+    "@types/react": "16.9.19",
+    "@types/styled-jsx": "2.2.8",
     "eslint-config-prettier": "6.9.0",
     "eslint-plugin-react": "7.18.0",
     "husky": "4.2.1",
     "lint-staged": "10.0.2",
     "prettier": "1.19.1",
+    "typescript": "3.7.5",
     "xo": "0.25.3"
   },
   "xo": {

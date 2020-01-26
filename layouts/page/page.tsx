@@ -1,15 +1,11 @@
-// Packages
-import React from 'react'
+import React, { ReactElement } from 'react'
 import Head from 'next/head'
-import PropTypes from 'prop-types'
 
-// Root
-import pkg from '../package'
+import pkg from '../../package.json'
 
-// Theme
-import { colors } from '../theme'
+import { colors } from '../../ui/theme'
 
-if (global.document) {
+if ('document' in global) {
   const info = [
     `Version: ${pkg.version}`,
     `Find the code here: https://github.com/${pkg.repository}`,
@@ -21,7 +17,7 @@ if (global.document) {
   }
 }
 
-const App = ({ children }) => {
+export const Page = ({ children }: { children: ReactElement }) => {
   return (
     <main>
       <Head>
@@ -31,7 +27,6 @@ const App = ({ children }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="description" content={pkg.description} />
-        <meta name="keywords" content={pkg.keywords} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="bu kinoshita" />
@@ -97,9 +92,3 @@ const App = ({ children }) => {
     </main>
   )
 }
-
-App.propTypes = {
-  children: PropTypes.any
-}
-
-export default App
