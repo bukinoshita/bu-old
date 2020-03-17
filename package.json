@@ -13,7 +13,7 @@
     "test": "xo"
   },
   "dependencies": {
-    "next": "9.2.1",
+    "next": "9.3.1",
     "react": "16.12.0",
     "react-dom": "16.12.0"
   },
