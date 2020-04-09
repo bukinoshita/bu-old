@@ -22,7 +22,7 @@
     "@types/styled-jsx": "2.2.8",
     "eslint-config-prettier": "6.10.1",
     "eslint-plugin-react": "7.19.0",
-    "husky": "4.2.3",
+    "husky": "4.2.5",
     "lint-staged": "10.1.2",
     "prettier": "2.0.4",
     "typescript": "3.8.3",
