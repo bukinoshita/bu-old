@@ -1,5 +1,5 @@
-export enum colors {
-  white = '#ffffff',
-  black = '#0e1012',
-  subtitle = '#ababab'
+export enum Colors {
+  White = '#ffffff',
+  Woodsmoke = '#0e1012',
+  SilverChalice = '#ababab',
 }
