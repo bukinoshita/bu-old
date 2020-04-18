@@ -1,0 +1,61 @@
+[
+  {
+    "title": "taskr",
+    "description": "A simple task manager app."
+  },
+  {
+    "title": "secret",
+    "description": "send a message through a safe, private, and encrypted link that automatically expires to ensure your stuff does not remain online forever."
+  },
+  {
+    "title": "alex-api",
+    "description": "Catch insensitive, inconsiderate writing"
+  },
+  { "title": "grammarly-api", "description": "Great Writing, Simplified" },
+  { "title": "space", "description": "A spacing util" },
+  {
+    "title": "sketch-json",
+    "description": "Transform sketch files to json and json to sketch files."
+  },
+  {
+    "title": "gh-polls",
+    "description": "Create a poll with gh-polls."
+  },
+
+  {
+    "title": "pokemon-f",
+    "description": "Algorithm to calculate `f` on capture pokemon method."
+  },
+  {
+    "title": "pokeball-shake",
+    "description": "Algorithm to determine how many times pokeball shakes"
+  },
+
+  { "title": "get-pokeball", "description": "Get pokeball information" },
+
+  {
+    "title": "read-package",
+    "description": "Reads package.json in the working directory"
+  },
+
+  {
+    "title": "has-package",
+    "description": "Check if a project has package.json"
+  },
+  {
+    "title": "is-github-repo",
+    "description": "Checks if string is a git repository"
+  },
+  { "title": "shout-error", "description": "An opinionated error message" },
+  { "title": "shout-success", "description": "An opinionated success message" },
+  { "title": "gerador", "description": "Gerador de dados brasileiros" },
+  { "title": "gerador-nome", "description": "Gerador brasileiro de Nomes" },
+  {
+    "title": "gerador-sexo",
+    "description": "Gerador brasileiro de Sexo da pessoa"
+  },
+  {
+    "title": "gerador-estado-civil",
+    "description": "Gerador brasileiro de Estado Civil"
+  }
+]

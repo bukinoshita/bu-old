@@ -3,13 +3,26 @@ import Head from 'next/head'
 
 import pkg from '../../package.json'
 
-import { colors } from '../../ui/theme'
+import { Colors, space } from 'ui/theme'
+import { Row } from 'ui/row'
+
+import { Footer } from 'components/footer'
+import { Header } from 'components/header'
 
 if ('document' in global) {
+  let vh = window.innerHeight * 0.01
+  document.documentElement.style.setProperty('--vh', `${vh}px`)
+
+  window.addEventListener('resize', () => {
+    // We execute the same script as before
+    let vh = window.innerHeight * 0.01
+    document.documentElement.style.setProperty('--vh', `${vh}px`)
+  })
+
   const info = [
     `Version: ${pkg.version}`,
     `Find the code here: https://github.com/${pkg.repository}`,
-    `Have a great day! 🎉`
+    `Have a great day! 🎉`,
   ]
 
   for (const message of info) {
@@ -19,18 +32,21 @@ if ('document' in global) {
 
 export const Page = ({ children }: { children: ReactElement }) => {
   return (
-    <main>
+    <>
       <Head>
         <title>bu kinoshita</title>
 
-        <meta name="theme-color" content={colors.black} />
+        <meta name="theme-color" content={Colors.Woodsmoke} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta charSet="utf-8" />
         <meta name="description" content={pkg.description} />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="bu kinoshita" />
-        <meta property="twitter:image" content="https://bukinoshita.io/static/cover.png" />
+        <meta
+          property="twitter:image"
+          content="https://bukinoshita.io/static/cover.png"
+        />
 
         <meta property="og:url" content="https://bukinoshita.io" />
         <meta property="og:type" content="website" />
@@ -41,7 +57,13 @@ export const Page = ({ children }: { children: ReactElement }) => {
         <link rel="icon" href="/static/icon.png" type="image/png" />
       </Head>
 
-      {children}
+      <Header />
+
+      <main>
+        <Row>{children}</Row>
+      </main>
+
+      <Footer />
 
       <style jsx global>
         {`
@@ -50,34 +72,20 @@ export const Page = ({ children }: { children: ReactElement }) => {
             margin: 0;
             -webkit-font-smoothing: antialiased;
             box-sizing: border-box;
-            font-family: -apple-system, system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto,
-              'Helvetica Neue', Arial, sans-serif;
+            font-family: -apple-system, system-ui, BlinkMacSystemFont,
+              'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
           }
 
           body {
-            background-color: ${colors.black};
+            background-color: ${Colors.Woodsmoke};
             text-transform: lowercase;
             font-size: 13px;
-          }
-
-          h1 {
-            font-size: 20px;
-          }
-
-          h2 {
-            font-size: 18px;
-          }
-
-          h3 {
-            font-size: 16px;
-          }
-
-          h4 {
-            font-size: 14px;
+            color: ${Colors.White};
           }
 
           a {
             text-decoration: none;
+            color: ${Colors.White};
           }
 
           li {
@@ -89,6 +97,15 @@ export const Page = ({ children }: { children: ReactElement }) => {
           }
         `}
       </style>
-    </main>
+
+      <style jsx={true}>{`
+        main {
+          display: flex;
+          align-items: center;
+          min-height: calc(var(--vh, 1vh) * 100 - 256px);
+          margin-top: ${space.spacing(14)};
+        }
+      `}</style>
+    </>
   )
 }

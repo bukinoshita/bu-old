@@ -1,11 +1,18 @@
 import React from 'react'
+import Link from 'next/link'
 
-import { colors } from '../../ui/theme'
+import { Colors, space } from 'ui/theme'
 
 export const Navigation = () => {
   return (
     <nav>
       <ul>
+        <li>
+          <Link href="/projects">
+            <a href="/projects">projects</a>
+          </Link>
+        </li>
+
         <li>
           <a href="https://github.com/bukinoshita">Github</a>
         </li>
@@ -21,8 +28,11 @@ export const Navigation = () => {
 
       <style jsx>{`
         nav {
-          text-align: center;
           width: 100%;
+        }
+
+        ul {
+          margin-top: ${space.spacing(10)};
         }
 
         li {
@@ -31,9 +41,8 @@ export const Navigation = () => {
 
         a {
           display: inline-block;
-          color: ${colors.white};
-          margin: 15px;
-          padding-bottom: 4px;
+          margin-right: ${space.spacing(4)};
+          padding-bottom: ${space.spacing(1)};
           letter-spacing: 2px;
           position: relative;
           opacity: 0.5;
@@ -47,7 +56,7 @@ export const Navigation = () => {
           height: 1px;
           bottom: -5px;
           left: 0;
-          background-color: ${colors.white};
+          background-color: ${Colors.White};
           visibility: hidden;
           transform: scaleX(0);
           transition: all 0.25s ease;
