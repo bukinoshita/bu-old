@@ -14,7 +14,7 @@
     "test": "xo --prettier"
   },
   "dependencies": {
-    "@bukinoshita/space": "0.0.2",
+    "@bukinoshita/space": "0.0.3",
     "next": "9.3.5",
     "react": "16.13.1",
     "react-dom": "16.13.1"
