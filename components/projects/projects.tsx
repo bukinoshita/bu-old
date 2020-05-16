@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Project } from './'
+import { Project } from '.'
 
 import { space } from 'ui/theme'
 
@@ -11,14 +11,14 @@ export const Projects = () => {
     <ul>
       {projects.map(({ title, description }: any) => (
         <Project
+          key={title}
           description={description}
           href={`https://github.com/bukinoshita/${title}`}
-          key={title}
           title={title}
         />
       ))}
 
-      <style jsx={true}>{`
+      <style jsx>{`
         ul {
           margin-top: ${space.spacing(15)};
         }

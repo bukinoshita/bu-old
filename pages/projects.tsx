@@ -18,7 +18,7 @@ const ProjectsPage = () => {
         <Projects />
         <a href="https://github.com/bukinoshita">Check more projects...</a>
 
-        <style jsx={true}>{`
+        <style jsx>{`
           a {
             font-size: 13px;
             margin-top: ${space.spacing(10)};

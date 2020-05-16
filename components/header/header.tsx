@@ -12,7 +12,7 @@ export const Header = () => {
         </a>
       </Link>
 
-      <style jsx={true}>{`
+      <style jsx>{`
         header {
           height: 100px;
           display: flex;
