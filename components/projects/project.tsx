@@ -12,7 +12,7 @@ export const Project = ({ title, description, href }: any) => {
         <p>{description}</p>
       </a>
 
-      <style jsx={true}>{`
+      <style jsx>{`
         li {
           margin-bottom: ${space.spacing(5)};
         }

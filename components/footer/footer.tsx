@@ -1,10 +1,11 @@
+import React from 'react'
 import { Colors, space } from 'ui/theme'
 
 export const Footer = () => (
   <footer>
     <span>© 2020</span>
 
-    <style jsx={true}>{`
+    <style jsx>{`
       footer {
         height: 100px;
         display: flex;

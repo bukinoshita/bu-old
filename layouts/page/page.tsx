@@ -10,19 +10,19 @@ import { Footer } from 'components/footer'
 import { Header } from 'components/header'
 
 if ('document' in global) {
-  let vh = window.innerHeight * 0.01
+  const vh = window.innerHeight * 0.01
   document.documentElement.style.setProperty('--vh', `${vh}px`)
 
   window.addEventListener('resize', () => {
     // We execute the same script as before
-    let vh = window.innerHeight * 0.01
+    const vh = window.innerHeight * 0.01
     document.documentElement.style.setProperty('--vh', `${vh}px`)
   })
 
   const info = [
     `Version: ${pkg.version}`,
     `Find the code here: https://github.com/${pkg.repository}`,
-    `Have a great day! 🎉`,
+    `Have a great day! 🎉`
   ]
 
   for (const message of info) {
@@ -98,7 +98,7 @@ export const Page = ({ children }: { children: ReactElement }) => {
         `}
       </style>
 
-      <style jsx={true}>{`
+      <style jsx>{`
         main {
           display: flex;
           align-items: center;

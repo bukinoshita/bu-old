@@ -22,5 +22,5 @@ export const Row = ({ children, size }: any) => {
 }
 
 Row.defaultProps = {
-  size: '600px',
+  size: '600px'
 }
