@@ -1,6 +1,5 @@
 node_modules
 .next
 .env
-.env.production
 .DS_Store
 .vercel
