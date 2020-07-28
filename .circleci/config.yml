@@ -2,14 +2,14 @@ version: 2.1
 orbs:
   node: circleci/node@3.0.1
 jobs:
-  build-and-test:
+  build-and-lint:
     executor:
       name: node/default
     steps:
       - checkout
-      - run: npm install
-      - run: npm test
+      - run: yarn
+      - run: yarn lint
 workflows:
-    build-and-test:
-      jobs:
-        - build-and-test
+  build-and-lint:
+    jobs:
+      - build-and-lint
