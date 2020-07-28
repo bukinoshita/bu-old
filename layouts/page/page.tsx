@@ -22,7 +22,7 @@ if ('document' in global) {
   const info = [
     `Version: ${pkg.version}`,
     `Find the code here: https://github.com/${pkg.repository}`,
-    `Have a great day! 🎉`
+    `Have a great day! 🎉`,
   ]
 
   for (const message of info) {
