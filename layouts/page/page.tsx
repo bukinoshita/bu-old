@@ -7,7 +7,6 @@ import { Colors, space } from 'ui/theme'
 import { Row } from 'ui/row'
 
 import { Footer } from 'components/footer'
-import { Header } from 'components/header'
 
 if ('document' in global) {
   const vh = window.innerHeight * 0.01
@@ -57,13 +56,9 @@ export const Page = ({ children }: { children: ReactElement }) => {
         <link rel="icon" href="/static/icon.png" type="image/png" />
       </Head>
 
-      <Header />
-
       <main>
         <Row>{children}</Row>
       </main>
-
-      <Footer />
 
       <style jsx global>
         {`
@@ -102,8 +97,7 @@ export const Page = ({ children }: { children: ReactElement }) => {
         main {
           display: flex;
           align-items: center;
-          min-height: calc(var(--vh, 1vh) * 100 - 256px);
-          margin-top: ${space.spacing(14)};
+          min-height: calc(var(--vh, 1vh) * 100);
         }
       `}</style>
     </>

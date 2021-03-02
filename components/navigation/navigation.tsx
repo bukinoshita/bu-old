@@ -1,5 +1,4 @@
 import React from 'react'
-import Link from 'next/link'
 
 import { Colors, space } from 'ui/theme'
 
@@ -8,21 +7,11 @@ export const Navigation = () => {
     <nav>
       <ul>
         <li>
-          <Link href="/projects">
-            <a href="/projects">projects</a>
-          </Link>
-        </li>
-
-        <li>
           <a href="https://github.com/bukinoshita">Github</a>
         </li>
 
         <li>
           <a href="https://twitter.com/bukinoshita">Twitter</a>
-        </li>
-
-        <li>
-          <a href="https://medium.com/@bukinoshita">Medium</a>
         </li>
       </ul>
 
