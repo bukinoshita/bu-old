@@ -15,9 +15,12 @@ module.exports = {
   extends: [
     'plugin:react/recommended',
     'plugin:@typescript-eslint/recommended',
-    'prettier/@typescript-eslint',
     'plugin:prettier/recommended',
+    'plugin:jsx-a11y/recommended',
   ],
-  plugins: [],
-  rules: {},
+  plugins: ['jsx-a11y'],
+  rules: {
+    'jsx-a11y/anchor-is-valid': 'off',
+    'react/prop-types': 'off',
+  },
 }

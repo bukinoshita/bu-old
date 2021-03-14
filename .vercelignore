@@ -1,2 +1,4 @@
 node_modules
-license
+.env
+.vercel
+.next
