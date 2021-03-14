@@ -1,8 +1,11 @@
 import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import 'tailwindcss/tailwind.css'
+import Head from 'next/head'
+import pkg from '../package.json'
 import * as Fathom from 'fathom-client'
+import { useRouter } from 'next/router'
 
-const App = ({ Component, pageProps }: any) => {
+const MyApp = ({ Component, pageProps }) => {
   const router = useRouter()
 
   useEffect(() => {
@@ -13,6 +16,7 @@ const App = ({ Component, pageProps }: any) => {
     function onRouteChangeComplete() {
       Fathom.trackPageview()
     }
+
     router.events.on('routeChangeComplete', onRouteChangeComplete)
 
     return () => {
@@ -20,7 +24,50 @@ const App = ({ Component, pageProps }: any) => {
     }
   }, [])
 
-  return <Component {...pageProps} />
+  return (
+    <>
+      <Head>
+        <title>{`${pkg.author} — ${pkg.description}`}</title>
+
+        <meta
+          name="description"
+          content={`${pkg.author} — ${pkg.description}`}
+        />
+        <link rel="shortcut icon" href="/static/favicon.png" />
+        <link rel="apple-touch-icon" href="static/favicon.png" />
+        <meta name="viewport" content="width=device-width" />
+        <meta
+          property="og:title"
+          content={`${pkg.author} — ${pkg.description}`}
+        />
+        <meta
+          property="og:description"
+          content={`${pkg.author} — ${pkg.description}`}
+        />
+        <meta
+          name="twitter:image"
+          content="https://bukinoshita.com/static/cover.png"
+        />
+        <meta name="twitter:card" content="summary_large_image" />
+
+        <meta
+          property="og:title"
+          content={`${pkg.author} — ${pkg.description}`}
+        />
+        <meta
+          property="og:description"
+          content={`${pkg.author} — ${pkg.description}`}
+        />
+        <meta property="og:image" content="static/cover.png" />
+        <meta property="og:url" content="https://bukinoshita.com" />
+        <meta property="og:type" content="website" />
+      </Head>
+
+      <main className="px-6 max-w-6xl mx-auto">
+        <Component {...pageProps} />
+      </main>
+    </>
+  )
 }
 
-export default App
+export default MyApp
