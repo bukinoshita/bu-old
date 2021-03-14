@@ -2,14 +2,14 @@ version: 2.1
 orbs:
   node: circleci/node@4.2.0
 jobs:
-  build-and-lint:
+  install-and-lint:
     executor:
       name: node/default
     steps:
       - checkout
-      - run: yarn
+      - run: yarn --ignore-engines
       - run: yarn lint
 workflows:
-  build-and-lint:
+  install-and-lint:
     jobs:
-      - build-and-lint
+      - install-and-lint
