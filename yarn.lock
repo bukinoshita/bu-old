@@ -110,10 +110,10 @@
   resolved "https://registry.yarnpkg.com/@hapi/hoek/-/hoek-9.1.1.tgz#9daf5745156fd84b8e9889a2dc721f0c58e894aa"
   integrity sha512-CAEbWH7OIur6jEOzaai83jq3FmKmv4PmX1JYfs9IrYcGEVI/lyL1EXJGCj7eFVJ0bg5QR8LMxBlEtA+xKiLpFw==
 
-"@headlessui/react@1.2.0":
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.2.0.tgz#e48652bfce82ddf73d7f331faeb9db6526ee6874"
-  integrity sha512-19DkLz8gDgbi+WvkoTzi9vs0NK9TJf94vbYhMzB4LYJo03Kili0gmvXT9CiKZoxXZ7YAvy/b1U1oQKEnjWrqxw==
+"@headlessui/react@1.7.2":
+  version "1.7.2"
+  resolved "https://registry.yarnpkg.com/@headlessui/react/-/react-1.7.2.tgz#e6a6a8d38342064a53182f1eb2bf6d9c1e53ba6a"
+  integrity sha512-snLv2lxwsf2HNTOBNgHYdvoYZ3ChJE8QszPi1d/hl9js8KrFrUulTaQBfSyPbJP5BybVreWh9DxCgz9S0Z6hKQ==
 
 "@jest/types@^27.0.2":
   version "27.0.2"
